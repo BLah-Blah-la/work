@@ -21,7 +21,7 @@ return [
        ],
     ],
 	
-	'defaultRoute' => 'clients',
+	'defaultRoute' => 'panel',
 	
     'components' => [
         'request' => [

@@ -19,8 +19,8 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Create Orders', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
      
-    <?php $userProvider->pagination->pageParam = 'PriceList-page';
-          $userProvider->sort->sortParam = 'PriceList-sort';
+    <?php /* $dataProviderList->pagination->pageParam = 'PriceListModel-page';
+          $dataProviderList->sort->sortParam = 'PriceListModel-sort'; */
 	
 	?>
 	<?= GridView::widget([
@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 	
-    <?php/* GridView::widget([
+    <?= GridView::widget([
     'dataProvider' => $dataProviderList,
     'filterModel' => $searchPriceListModel,
     'columns' => [
@@ -48,22 +48,14 @@ $this->params['breadcrumbs'][] = $this->title;
 			'name',
 			'terms',
          [
-		    
-			
 			'class' => 'yii\grid\ActionColumn',
             'header'=>'Действия', 
             'headerOptions' => ['width' => '80'],
             'template' => '{view} {update} {delete}{link}',
         ],
     ],
-     ]) */?>
+  ]) ?>
 	
-	<?php echo '<h1>Posts</h1>';
-          echo GridView::widget([
-          'dataProvider' => $userProvider,
-]);
-          	
-	?>
 	
 	
 	
