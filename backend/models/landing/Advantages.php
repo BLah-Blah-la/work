@@ -31,7 +31,7 @@ class Advantages extends \yii\db\ActiveRecord
         return [
             [['description'], 'string'],
 			[['logs'], 'file', 'extensions' => 'png, jpg'],
-            [['logo'], 'string', 'max' => 50],
+            [['logo'], 'string', 'max' => 60],
         ];
     }
 
@@ -44,30 +44,15 @@ class Advantages extends \yii\db\ActiveRecord
             'id' => 'ID',
             'logo' => 'Logo',
             'description' => 'Description',
+		
+	        
         ];
     }
-    
-    public function beforeSave($insert){
-		
-		if(parent::beforeSave($insert)){
-            $upload = new UploadedFile();
-            $path = 'images/Advantages/'
-                . Yii::$app->security->generateRandomString()
-                . '.'
-                . $upload->extension;
 
-                $this->logo = $path;
-                $upload->saveAs($path);
-
-			return true;
-			
-		} else {
-			
-			return false;
-			
-		}
-		
-        
+public function upload($path)
+{
+   $this->logo = $path;
+   return true;
 
 
 }

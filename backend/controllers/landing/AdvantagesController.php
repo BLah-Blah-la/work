@@ -67,13 +67,27 @@ class AdvantagesController extends Controller
     {
         $model = new Advantages();
 
-        $upload = UploadedFile::getInstance($model, 'logs');
+        if ($model->load(Yii::$app->request->post())) {
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()){
-            
-            return $this->redirect(['view', 'id' => $model->id]);
-}                
-     
+            $uploadedFile = UploadedFile::getInstance($model, 'logs');
+
+            if ($uploadedFile !== null) {
+                $path = 'images/Advantages/'
+                    . Yii::$app->security->generateRandomString()
+                    . '.' . $uploadedFile->extension;
+                
+                if ($model->validate()) {
+                    $model->upload($path);
+                    $uploadedFile->saveAs($path);
+                }
+            }
+            if ($model->save()) {
+
+               return $this->redirect(['view', 'id' => $model->id]);
+
+            } 
+        }            
+
         return $this->render('create', [
             'model' => $model
             ]);

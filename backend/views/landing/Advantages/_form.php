@@ -10,11 +10,11 @@ use yii\widgets\ActiveForm;
 
 <div class="advantages-form">
 
-    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data', 'class' => 'form-horizontal col-lg-11']]); ?>
 
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
     
-	<?= $form->field($model, 'logs')->fileInput()->label('Заменить картинку') ?>
+	<?= $form->field($model, 'logs')->fileInput()->label('Заменить картинку')?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
