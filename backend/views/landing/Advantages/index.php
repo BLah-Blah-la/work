@@ -3,6 +3,8 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
+use yii\helpers\Url;
+
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\landing\search\AdvantagesSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -26,10 +28,26 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
             'description:ntext',
+            
+            [
+                /* 'attribute' => 'logo', */
+                'label' => 'Логотип',
+                'format' => 'raw',
+                'value' => function($data){
+                    return Html::img(Url::toRoute($data->logo),[
+                        'alt'=>'yii2 - картинка в gridview',
+                        'style' => 'width:50px;height:50px'
+                    ]);
+                },
+            ],
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'yii\grid\ActionColumn',
+             'header'=>'Действия', 
+            'headerOptions' => ['width' => '80'],
+            'template' => '{view} {update} {delete}{link}',
+
+],
         ],
     ]); ?>
     <?php Pjax::end(); ?>

@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\landing\Advantages */
@@ -28,9 +29,20 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
-            'logo',
+
             'description:ntext',
+            [
+                /* 'attribute' => 'logo', */
+                'label' => 'Логотип',
+                'format' => 'raw',
+                'value' => function($data){
+                    return Html::img(Url::toRoute($data->logo),[
+                        'alt'=>'yii2 - картинка в gridview',
+                        'style' => 'width:50px;height:50px'
+                    ]);
+                },
+            ],
+
         ],
     ]) ?>
 

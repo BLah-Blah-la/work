@@ -52,7 +52,7 @@ class PanelController extends Controller
 	
 	public function actionTest(){
 		
-		return Yii::getAlias('@common');   
+		return $this->render('img');   
 		
 	}
 	
