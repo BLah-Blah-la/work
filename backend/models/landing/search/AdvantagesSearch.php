@@ -20,6 +20,7 @@ class AdvantagesSearch extends Advantages
         return [
             [['id'], 'integer'],
             [['logo', 'description'], 'safe'],
+			
         ];
     }
 

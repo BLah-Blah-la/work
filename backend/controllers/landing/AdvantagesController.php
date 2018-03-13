@@ -8,6 +8,7 @@ use backend\models\landing\search\AdvantagesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * AdvantagesController implements the CRUD actions for Advantages model.
@@ -66,13 +67,16 @@ class AdvantagesController extends Controller
     {
         $model = new Advantages();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        }
+        $upload = UploadedFile::getInstance($model, 'logs');
 
+        if ($model->load(Yii::$app->request->post()) && $model->save()){
+            
+            return $this->redirect(['view', 'id' => $model->id]);
+}                
+     
         return $this->render('create', [
-            'model' => $model,
-        ]);
+            'model' => $model
+            ]);
     }
 
     /**

@@ -3,7 +3,7 @@
 namespace backend\models\landing;
 
 use Yii;
-
+use yii\web\UploadedFile;
 /**
  * This is the model class for table "advantages".
  *
@@ -16,6 +16,8 @@ class Advantages extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+        public $logs;
+
     public static function tableName()
     {
         return 'advantages';
@@ -28,6 +30,7 @@ class Advantages extends \yii\db\ActiveRecord
     {
         return [
             [['description'], 'string'],
+			[['logs'], 'file', 'extensions' => 'png, jpg'],
             [['logo'], 'string', 'max' => 50],
         ];
     }
@@ -43,4 +46,30 @@ class Advantages extends \yii\db\ActiveRecord
             'description' => 'Description',
         ];
     }
+    
+    public function beforeSave($insert){
+		
+		if(parent::beforeSave($insert)){
+            $upload = new UploadedFile();
+            $path = 'images/Advantages/'
+                . Yii::$app->security->generateRandomString()
+                . '.'
+                . $upload->extension;
+
+                $this->logo = $path;
+                $upload->saveAs($path);
+
+			return true;
+			
+		} else {
+			
+			return false;
+			
+		}
+		
+        
+
+
+}
+
 }

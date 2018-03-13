@@ -3,6 +3,7 @@ return [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
+		'@advantages' => 'images/Advantages/',
     ],
 	
 	'modules' => [

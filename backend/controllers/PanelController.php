@@ -36,7 +36,7 @@ class PanelController extends Controller
                     ],
                     [
                         'allow' => true,
-                        'roles' => ['?'],
+                        'roles' => ['Superadmin'],
                     ],
                 ],
             ],
@@ -49,6 +49,13 @@ class PanelController extends Controller
 		
 		
 	}
+	
+	public function actionTest(){
+		
+		return Yii::getAlias('@common');   
+		
+	}
+	
 	
 	
 	
