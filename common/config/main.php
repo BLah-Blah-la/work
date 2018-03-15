@@ -5,7 +5,7 @@ return [
         '@npm'   => '@vendor/npm-asset',
 		'@advantages' => 'images/Advantages/',
     ],
-	
+
 	'modules' => [
     'user' => [
         'class' => 'dektrium\user\Module',

@@ -32,6 +32,7 @@ return [
             'theme'=>[
                 'pathMap'=>[
                   '@dektrium/user/views' => '@backend/views/user',
+				 // '@backend/views/layouts' => '@vendor/yiister/yii2-adminlte/views/layouts',
                 ],
             ],
         ],
