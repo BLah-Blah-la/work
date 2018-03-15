@@ -14,7 +14,6 @@ class m180213_074417_create_client_client_table extends Migration
     {
         $this->createTable('client_client', [
             'id' => $this->primaryKey(),
-			'id' => $this->integer(),
             'first_name' => $this->string(50)->notNull(),
             'last_name' => $this->string(50)->notNull(),
             'age' => $this->integer()->notNull(),

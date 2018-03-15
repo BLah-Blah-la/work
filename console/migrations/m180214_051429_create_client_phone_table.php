@@ -17,7 +17,6 @@ class m180214_051429_create_client_phone_table extends Migration
     {
         $this->createTable('client_phone', [
             'id' => $this->primaryKey(),
-			'id' => $this->integer(),
             'client_id' => $this->integer()->notNull(),
             'phone_digital' => $this->string(10),
         ]);
