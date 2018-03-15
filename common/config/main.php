@@ -15,6 +15,10 @@ return [
         // configure in needed configs
       ],
 	  'rbac' => 'dektrium\rbac\RbacWebModule',
+	  
+	  'partner' => [
+            'class' => 'vendor\landing\partner\Module',
+        ],
     ],
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [

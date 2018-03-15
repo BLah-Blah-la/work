@@ -13,6 +13,9 @@ use frontend\models\RegistrationForm;
 use frontend\models\SomeAccessories;
 use yii\filters\AccessControl;
 use dektrium\user\filters\AccessRule;
+use backend\models\landing\Advantages;
+use yii\helpers\ArrayHelper;
+use backend\models\lopez;
 
 class PanelController extends Controller
 {
@@ -52,7 +55,11 @@ class PanelController extends Controller
 	
 	public function actionTest(){
 		
-		return $this->render('img');   
+		$model = new lopez();
+		$categories = Advantages::find()->select(['id', 'description'])->all(); 
+        $data = ArrayHelper::map($categories, 'id', 'description');
+		
+		return $this->render('img', ['model' => $model, 'data' => $data]);   
 		
 	}
 	
