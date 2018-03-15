@@ -13,7 +13,7 @@ use yii\bootstrap\Nav;
 		
 		[
             'label' => 'Advantages',
-            'url' => ['landing/advantages'],
+            'url' => ['partner/advantages'],
             'linkOptions' => [''],
         ],
 		
@@ -31,7 +31,7 @@ use yii\bootstrap\Nav;
    
         [
             'label' => 'Orders',
-            'url' => ['landing/order'],
+            'url' => ['partner/order'],
             'linkOptions' => [''],
         ],
 
@@ -50,7 +50,7 @@ use yii\bootstrap\Nav;
 		
         [
             'label' => 'PriceList',
-            'url' => ['landing/price-list'],
+            'url' => ['partner/price-list'],
             'linkOptions' => [''],
         ],
         
