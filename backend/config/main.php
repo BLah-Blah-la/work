@@ -11,6 +11,7 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
+	/* 'layout' => 'oos', */
     'modules' => [
     'user' => [
 	   
@@ -59,7 +60,8 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
              'rules' => [
-			 'clients/<id:\d+>' => 'clients/view',
+			/*  'partner/<id:\d+>' => 'partner/landing',
+			 'partner/' => 'partner/landing', */
             ], 
 			
         ],

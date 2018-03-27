@@ -4,7 +4,7 @@ use yii\bootstrap\Nav;
 ?>
 <?= Nav::widget([
     'items' => [
-        [
+        /* [
             'label' => 'Titles',
             'url' => ['landing/titles'],
             'linkOptions' => [],
@@ -67,7 +67,8 @@ use yii\bootstrap\Nav;
         ],
         
      
-    ],
+    ], */
+],
     'options' => ['class' =>'navbar navbar-light bg-light'],
 ]);
 
