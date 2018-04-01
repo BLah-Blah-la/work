@@ -17,13 +17,18 @@ return [
 		'as frontend' => 'dektrium\user\filters\FrontendFilter',
        ],
     ],
-	'defaultRoute' => 'site',
 	'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
 			'baseUrl' => '',
         ],
- 
+  /*    'user' => [
+        'identityCookie' => [
+            'name'     => '_frontendIdentity',
+            'path'     => '/',
+            'httpOnly' => true,
+        ], 
+	],*/
  	'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
@@ -53,7 +58,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
              'rules' => [
-			 'site/<id:\d+>' => 'site/view',
+			 'phone/<id:\d+>' => 'phone/view',
             ], 
 			
         ],

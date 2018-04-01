@@ -3,9 +3,7 @@ return [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
-		'@advantages' => 'images/Advantages/',
     ],
-
 	'modules' => [
     'user' => [
         'class' => 'dektrium\user\Module',
@@ -15,11 +13,10 @@ return [
         // configure in needed configs
       ],
 	  'rbac' => 'dektrium\rbac\RbacWebModule',
-	  
-	  'partner' => [
+      'partner' => [
             'class' => 'vendor\landing\partner\Module',
-        ],
-    ],
+	],
+	],
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
         'cache' => [
@@ -31,11 +28,8 @@ return [
 	'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-        ],
-	/* 'user' => [
-            'identityClass' => 'common\models\User',
-            'enableAutoLogin' => true,
-        ], */	
+        ],	
 
     ],
 ];
+?>

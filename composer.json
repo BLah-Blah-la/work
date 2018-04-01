@@ -12,15 +12,25 @@
         "irc": "irc://irc.freenode.net/yii",
         "source": "https://github.com/yiisoft/yii2"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
-        "php": ">=5.4.0",
+        "nirvana-msu/yii2-showloading": "1.0.*@dev",
+		"php": ">=5.4.0",
         "yiisoft/yii2": "~2.0.6",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
         "dektrium/yii2-user": "^0.9.13",
         "dektrium/yii2-rbac": "1.0.0-alpha@dev",
-        "yiister/yii2-gentelella": "~1.0"
+        "yiister/yii2-gentelella": "~1.0",
+        "phpnt/yii2-chartjs": "^0.0.2",
+        "kartik-v/yii2-widgets": "*",
+        "kartik-v/yii2-mpdf": "dev-master",
+        "kartik-v/yii2-widget-datepicker": "@dev",
+        "dvizh/yii2-cart": "@dev",
+        "dvizh/yii2-order": "@dev",
+		"timurmelnikov/yii2-loading-overlay": "~1.0.0",
+        "kartik-v/yii2-widget-fileinput": "@dev",
+        "machour/yii2-notifications": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

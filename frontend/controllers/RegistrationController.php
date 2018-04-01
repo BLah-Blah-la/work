@@ -129,9 +129,17 @@ class RegistrationController extends Controller
 		$array = ['1', '3', '10', '12'];
 		$massiv = [1, 3, 31, 21, 78];
 		$super_massiv = ArrayHelper::isIndexed($array);
-		echo $super_massiv;
+		echo var_dump($super_massiv);
 		
-/* 		for($i = 0; $i<=count($super_massiv); $i++){
+		$super_massiv = ArrayHelper::isAssociative($massiv);
+	
+		echo var_dump($super_massiv);
+
+	    //$echo = ArrayHelper::multisort($array, DESC);
+		
+		
+		
+		/*for($i = 0; $i<=count($super_massiv); $i++){
 			
 			echo $super_massiv[$i] . "<br/>";
 			

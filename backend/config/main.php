@@ -11,10 +11,10 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-	/* 'layout' => 'oos', */
-    'modules' => [
+/* 	'layout' => 'oos',
+ */    'modules' => [
     'user' => [
-	   
+	  
 	   'modelMap' => [
 	   'RegistrationForm' => 'backend\models\RegistrationForm'
 	   ],
@@ -33,7 +33,6 @@ return [
             'theme'=>[
                 'pathMap'=>[
                   '@dektrium/user/views' => '@backend/views/user',
-				 // '@backend/views/layouts' => '@vendor/yiister/yii2-adminlte/views/layouts',
                 ],
             ],
         ],
@@ -60,8 +59,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
              'rules' => [
-			/*  'partner/<id:\d+>' => 'partner/landing',
-			 'partner/' => 'partner/landing', */
+			 'clients/<id:\d+>' => 'clients/view',
             ], 
 			
         ],

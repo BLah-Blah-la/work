@@ -16,12 +16,19 @@ use dektrium\user\filters\AccessRule;
 use backend\models\landing\Advantages;
 use yii\helpers\ArrayHelper;
 use backend\models\lopez;
+use yii\helpers\Html;
+use yii\helpers\Url;
+use backend\models\get;
+use backend\traits\EventTrait;
+
 
 class PanelController extends Controller
 {
     /**
      * @inheritdoc
      */
+/* 	public $layout = 'main'; */
+	
     public function behaviors()
     {
         return [
@@ -48,25 +55,13 @@ class PanelController extends Controller
 	
 	public function actionIndex(){
 		
-		return $this->render('index');
+
 		
-		
-	}
-	
-	public function actionTest(){
-		
-		$model = new lopez();
-		$categories = Advantages::find()->select(['id', 'description'])->all(); 
-        $data = ArrayHelper::map($categories, 'id', 'description');
-		
-		return $this->render('img', ['model' => $model, 'data' => $data]);   
+        return $this->render('index',['items'=>$items]); 
 		
 	}
 	
-	
-	
-	
-}
+	}
 
 
 
