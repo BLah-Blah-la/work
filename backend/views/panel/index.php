@@ -1,36 +1,75 @@
 <?php
 use yii\bootstrap\Nav;
-use yii\bootstrap\Carousel;
-use yii\bootstrap\Modal;
-use yii\helpers\Html;
-use yii\helpers\Url;
-use common\models\querys;
-use timurmelnikov\widgets\LoadingOverlayPjax;
-?>
-
-<?php
-
-Modal::begin([
-'header' => '<h2>Hello world</h2>',
-'options' => ['id'=>'exampleModal'],
-
-'footer' => 'Низ окна',
-
-]);
-echo 'Say hello...';
-
-echo Carousel::widget([
- 'items' => $items,
- 'options' => ['class' => 'carousel slide', 'data-interval' => ''],
- 'controls' => [
- '<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>',
- '<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>'
- ]
-]);
-
-
-Modal::end();
 
 ?>
+<?= Nav::widget([
+    'items' => [
+        /* [
+            'label' => 'Titles',
+            'url' => ['landing/titles'],
+            'linkOptions' => [],
+            
+        ],
 		
+		[
+            'label' => 'Advantages',
+            'url' => ['partner/advantages'],
+            'linkOptions' => [''],
+        ],
+		
+        [
+            'label' => 'Callback',
+            'url' => ['landing/callback'],
+            'linkOptions' => [''],
+        ],
+        
+        [
+            'label' => 'Contacts',
+            'url' => ['landing/contacts'],
+            'linkOptions' => [''],
+        ],
+   
+        [
+            'label' => 'Orders',
+            'url' => ['partner/order'],
+            'linkOptions' => [''],
+        ],
 
+        [
+            'label' => 'Logo',
+            'url' => ['landing/logo'],
+            'linkOptions' => [],
+            
+        ],
+		
+		[
+            'label' => 'Portfolio',
+            'url' => ['landing/portfolio'],
+            'linkOptions' => [''],
+        ],
+		
+        [
+            'label' => 'PriceList',
+            'url' => ['partner/price-list'],
+            'linkOptions' => [''],
+        ],
+        
+        [
+            'label' => 'Reviews',
+            'url' => ['landing/reviews'],
+            'linkOptions' => [''],
+        ],
+   
+        [
+            'label' => 'Steps',
+            'url' => ['landing/steps'],
+            'linkOptions' => [''],
+        ],
+        
+     
+    ], */
+],
+    'options' => ['class' =>'navbar navbar-light bg-light'],
+]);
+
+?>

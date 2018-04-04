@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "057b1d379e47976f4cc97c4b118af146",
+    "content-hash": "a0c6da94ed45726108b75c367caf1385",
     "packages": [
         {
             "name": "2amigos/yii2-dosamigos-asset-bundle",
@@ -111,6 +111,72 @@
             "time": "2018-02-12T06:59:54+00:00"
         },
         {
+            "name": "abeautifulsite/simpleimage",
+            "version": "2.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/claviska/SimpleImage.git",
+                "reference": "54a99d302355d22ee00d9842a8dbe101a52203d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/claviska/SimpleImage/zipball/54a99d302355d22ee00d9842a8dbe101a52203d8",
+                "reference": "54a99d302355d22ee00d9842a8dbe101a52203d8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "abeautifulsite": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nazar Mokrynskyi",
+                    "email": "nazar@mokrynskyi.com",
+                    "homepage": "http://cleverstyle.org/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Cory LaViska",
+                    "homepage": "http://www.abeautifulsite.net/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PHP class that simplifies working with images",
+            "time": "2017-01-06T16:38:10+00:00"
+        },
+        {
+            "name": "bower-asset/animate.css",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/daneden/animate.css.git",
+                "reference": "da9afc06e8aa563baae6f406a0a844999ccc066b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/daneden/animate.css/zipball/da9afc06e8aa563baae6f406a0a844999ccc066b",
+                "reference": "da9afc06e8aa563baae6f406a0a844999ccc066b",
+                "shasum": null
+            },
+            "type": "bower-asset",
+            "time": "2018-02-07T16:47:28+00:00"
+        },
+        {
             "name": "bower-asset/bootstrap",
             "version": "v3.3.7",
             "source": {
@@ -131,6 +197,30 @@
             "license": [
                 "MIT"
             ]
+        },
+        {
+            "name": "bower-asset/bootstrap.growl",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:mouse0270/bootstrap-growl.git",
+                "reference": "6a83ec48aa26dbc08454a45d87b14d9d9271210d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mouse0270/bootstrap-growl/zipball/6a83ec48aa26dbc08454a45d87b14d9d9271210d",
+                "reference": "6a83ec48aa26dbc08454a45d87b14d9d9271210d",
+                "shasum": null
+            },
+            "require": {
+                "bower-asset/bootstrap": ">=2.0.0",
+                "bower-asset/jquery": ">=1.10.2"
+            },
+            "type": "bower-asset",
+            "license": [
+                "MIT"
+            ],
+            "time": "2017-06-27T11:48:11+00:00"
         },
         {
             "name": "bower-asset/bootstrap3-dialog",
@@ -156,21 +246,21 @@
             ]
         },
         {
-            "name": "bower-asset/chart.js",
+            "name": "bower-asset/cropper",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/chartjs/Chart.js.git",
-                "reference": "25f26346d5fe5806d3ed9f507ed137da02badcc8"
+                "url": "https://github.com/fengyuanchen/cropper.git",
+                "reference": "19ebc4b7ab1a56f08260b424a699dd2c29135ab5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chartjs/Chart.js/zipball/25f26346d5fe5806d3ed9f507ed137da02badcc8",
-                "reference": "25f26346d5fe5806d3ed9f507ed137da02badcc8",
+                "url": "https://api.github.com/repos/fengyuanchen/cropper/zipball/19ebc4b7ab1a56f08260b424a699dd2c29135ab5",
+                "reference": "19ebc4b7ab1a56f08260b424a699dd2c29135ab5",
                 "shasum": null
             },
             "type": "bower-asset",
-            "time": "2018-03-13T22:52:19+00:00"
+            "time": "2018-03-18T03:33:34+00:00"
         },
         {
             "name": "bower-asset/eonasdan-bootstrap-datetimepicker",
@@ -260,6 +350,22 @@
             ]
         },
         {
+            "name": "bower-asset/jcrop",
+            "version": "v0.9.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tapmodo/Jcrop.git",
+                "reference": "1902fbc6afa14481dc019a17e0dcb7d62b808a98"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tapmodo/Jcrop/zipball/1902fbc6afa14481dc019a17e0dcb7d62b808a98",
+                "reference": "1902fbc6afa14481dc019a17e0dcb7d62b808a98",
+                "shasum": null
+            },
+            "type": "bower-asset"
+        },
+        {
             "name": "bower-asset/jquery",
             "version": "3.2.1",
             "source": {
@@ -305,20 +411,20 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git@github.com:moment/moment.git",
-                "reference": "7c4c091bedb86ca6c1a5c5419ad5204ef3926347"
+                "url": "https://github.com/moment/moment.git",
+                "reference": "db71a655fc51fe58009675608a400d0d4cd0ca87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moment/moment/zipball/7c4c091bedb86ca6c1a5c5419ad5204ef3926347",
-                "reference": "7c4c091bedb86ca6c1a5c5419ad5204ef3926347",
+                "url": "https://api.github.com/repos/moment/moment/zipball/db71a655fc51fe58009675608a400d0d4cd0ca87",
+                "reference": "db71a655fc51fe58009675608a400d0d4cd0ca87",
                 "shasum": null
             },
             "type": "bower-asset",
             "license": [
                 "MIT"
             ],
-            "time": "2018-03-02T20:37:47+00:00"
+            "time": "2018-03-30T21:53:58+00:00"
         },
         {
             "name": "bower-asset/punycode",
@@ -335,6 +441,25 @@
                 "shasum": null
             },
             "type": "bower-asset"
+        },
+        {
+            "name": "bower-asset/simple-ajax-uploader",
+            "version": "2.6.1",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:LPology/Simple-Ajax-Uploader.git",
+                "reference": "06c094a7d383a1e6643ab4c77716f01607489b54"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LPology/Simple-Ajax-Uploader/zipball/06c094a7d383a1e6643ab4c77716f01607489b54",
+                "reference": "06c094a7d383a1e6643ab4c77716f01607489b54",
+                "shasum": null
+            },
+            "type": "bower-asset",
+            "license": [
+                "MIT"
+            ]
         },
         {
             "name": "bower-asset/store.js",
@@ -373,6 +498,51 @@
             "license": [
                 "MIT"
             ]
+        },
+        {
+            "name": "budyaga/yii2-cropper",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/krivochenko/yii2-cropper.git",
+                "reference": "142b8e2da6ad16bb1ff252e75ef25a68c63bff26"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/krivochenko/yii2-cropper/zipball/142b8e2da6ad16bb1ff252e75ef25a68c63bff26",
+                "reference": "142b8e2da6ad16bb1ff252e75ef25a68c63bff26",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/jcrop": "=0.9.12",
+                "bower-asset/simple-ajax-uploader": "2.6.1",
+                "yiisoft/yii2": "*",
+                "yiisoft/yii2-imagine": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "budyaga\\cropper\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sergey Krivochenko",
+                    "email": "budyaga@gmail.com"
+                }
+            ],
+            "description": "Yii-Framework widget for uploading and cropping images",
+            "keywords": [
+                "crop",
+                "extension",
+                "upload",
+                "yii2"
+            ],
+            "time": "2017-11-30T08:56:58+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -435,6 +605,64 @@
             "time": "2018-03-26T11:25:22+00:00"
         },
         {
+            "name": "costa-rico/yii2-images",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/CostaRico/yii2-images.git",
+                "reference": "ac4e15f2fdd01019c3c2edd2ba90e71138370dc3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/CostaRico/yii2-images/zipball/ac4e15f2fdd01019c3c2edd2ba90e71138370dc3",
+                "reference": "ac4e15f2fdd01019c3c2edd2ba90e71138370dc3",
+                "shasum": ""
+            },
+            "require": {
+                "abeautifulsite/simpleimage": "2.7",
+                "yiisoft/yii2": "*"
+            },
+            "require-dev": {
+                "codeception/specify": "*",
+                "codeception/verify": "*",
+                "mikey179/vfsstream": "1.3.*@dev",
+                "yiisoft/yii2-codeception": "*"
+            },
+            "suggest": {
+                "ext-imagick": ""
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "rico\\yii2images\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Costa Rico",
+                    "email": "zetogo@gmail.com"
+                },
+                {
+                    "name": "Rob Rhyne",
+                    "email": "rob.rhyne@gmail.com"
+                }
+            ],
+            "description": "yii2 images module for storing images",
+            "keywords": [
+                "Costa Rico",
+                "images",
+                "images store",
+                "store",
+                "yii2",
+                "yii2-images"
+            ],
+            "time": "2017-11-21T20:46:30+00:00"
+        },
+        {
             "name": "dektrium/yii2-rbac",
             "version": "1.0.0-alpha",
             "source": {
@@ -493,12 +721,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dektrium/yii2-user.git",
-                "reference": "6e841f935f3af814cfadf16e4ae5f44b47741049"
+                "reference": "8f2daea532f7efefc3f808e50d74a91c0de71ff4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dektrium/yii2-user/zipball/6e841f935f3af814cfadf16e4ae5f44b47741049",
-                "reference": "6e841f935f3af814cfadf16e4ae5f44b47741049",
+                "url": "https://api.github.com/repos/dektrium/yii2-user/zipball/8f2daea532f7efefc3f808e50d74a91c0de71ff4",
+                "reference": "8f2daea532f7efefc3f808e50d74a91c0de71ff4",
                 "shasum": ""
             },
             "require": {
@@ -544,7 +772,7 @@
                 "yii2",
                 "yii2-user"
             ],
-            "time": "2018-01-31T15:54:35+00:00"
+            "time": "2018-04-03T12:24:41+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -552,12 +780,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "cc709ba91eee09540091ad5a5f2616727662e41b"
+                "reference": "464b5feb7c005a39414e3e17499dd90ac6a7df4c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/cc709ba91eee09540091ad5a5f2616727662e41b",
-                "reference": "cc709ba91eee09540091ad5a5f2616727662e41b",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/464b5feb7c005a39414e3e17499dd90ac6a7df4c",
+                "reference": "464b5feb7c005a39414e3e17499dd90ac6a7df4c",
                 "shasum": ""
             },
             "require": {
@@ -598,34 +826,33 @@
                 "lexer",
                 "parser"
             ],
-            "time": "2017-07-24T09:37:08+00:00"
+            "time": "2018-04-02T03:22:37+00:00"
         },
         {
-            "name": "dvizh/yii2-cart",
+            "name": "dvizh/yii2-gallery",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/dvizh/yii2-cart.git",
-                "reference": "ded5feb5561f397e090f31572db3da194ec042aa"
+                "url": "https://github.com/dvizh/yii2-gallery.git",
+                "reference": "e5f6ff72dca596f64c1bf82e9871f4a187af058a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dvizh/yii2-cart/zipball/ded5feb5561f397e090f31572db3da194ec042aa",
-                "reference": "ded5feb5561f397e090f31572db3da194ec042aa",
+                "url": "https://api.github.com/repos/dvizh/yii2-gallery/zipball/e5f6ff72dca596f64c1bf82e9871f4a187af058a",
+                "reference": "e5f6ff72dca596f64c1bf82e9871f4a187af058a",
                 "shasum": ""
             },
             "require": {
+                "abeautifulsite/simpleimage": "2.*",
+                "kartik-v/yii2-widget-fileinput": "*",
                 "php": ">=5.4.0",
                 "yiisoft/yii2": "*",
                 "yiisoft/yii2-bootstrap": "*"
             },
             "type": "yii2-extension",
-            "extra": {
-                "bootstrap": "dvizh\\cart\\Bootstrap"
-            },
             "autoload": {
                 "psr-4": {
-                    "dvizh\\cart\\": "src\\"
+                    "dvizh\\gallery\\": "src\\"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -638,18 +865,16 @@
                     "email": "admin@nethammer.ru"
                 }
             ],
-            "description": "yii2-cart it's a simple cart module to collect application models, that implement cart interface + widgets",
-            "homepage": "https://github.com/dvizh/",
+            "description": "Модуль позволяет загружать виджетом картинки",
+            "homepage": "https://github.com/dvizh/yii2-gallery",
             "keywords": [
                 "application",
-                "cart",
                 "dvizh",
-                "module",
-                "shop",
-                "yii 2",
-                "yii2"
+                "images",
+                "yii2",
+                "yii2-images"
             ],
-            "time": "2018-02-05T13:01:10+00:00"
+            "time": "2018-02-05T13:08:30+00:00"
         },
         {
             "name": "dvizh/yii2-order",
@@ -711,6 +936,57 @@
                 "yii2"
             ],
             "time": "2018-02-05T13:07:50+00:00"
+        },
+        {
+            "name": "dvizh/yii2-review",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dvizh/yii2-review.git",
+                "reference": "b150c976e72f2b2cfd6623973db8d4b086bca7b2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dvizh/yii2-review/zipball/b150c976e72f2b2cfd6623973db8d4b086bca7b2",
+                "reference": "b150c976e72f2b2cfd6623973db8d4b086bca7b2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "*",
+                "yiisoft/yii2-bootstrap": "*"
+            },
+            "require-dev": {
+                "yiisoft/yii2-debug": "*",
+                "yiisoft/yii2-gii": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "dvizh\\review\\": "src\\"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Ilya Pistol",
+                    "email": "admin@nethammer.ru"
+                }
+            ],
+            "description": "review for a some yii2-model",
+            "homepage": "https://github.com/dvizh/yii2-review",
+            "keywords": [
+                "application",
+                "dvizh",
+                "module",
+                "review",
+                "yii 2",
+                "yii2"
+            ],
+            "time": "2018-02-17T20:41:43+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -928,16 +1204,16 @@
         },
         {
             "name": "giggsey/locale",
-            "version": "1.4",
+            "version": "1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/Locale.git",
-                "reference": "e351a72ad6af6b41b690efdeffe1138fe5cc8b9c"
+                "reference": "3c9cc23c15851c54cb3ccd41a00fd4b5a89feeff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/Locale/zipball/e351a72ad6af6b41b690efdeffe1138fe5cc8b9c",
-                "reference": "e351a72ad6af6b41b690efdeffe1138fe5cc8b9c",
+                "url": "https://api.github.com/repos/giggsey/Locale/zipball/3c9cc23c15851c54cb3ccd41a00fd4b5a89feeff",
+                "reference": "3c9cc23c15851c54cb3ccd41a00fd4b5a89feeff",
                 "shasum": ""
             },
             "require": {
@@ -950,10 +1226,10 @@
                 "phing/phing": "~2.7",
                 "phpunit/phpunit": "^4.8|^5.0",
                 "satooshi/php-coveralls": "^1.0",
-                "symfony/console": "^2.8|^3.0",
-                "symfony/filesystem": "^2.8|^3.0",
-                "symfony/finder": "^2.8|^3.0",
-                "symfony/process": "^2.8|^3.0"
+                "symfony/console": "^2.8|^3.0|^4.0",
+                "symfony/filesystem": "^2.8|^3.0|^4.0",
+                "symfony/finder": "^2.8|^3.0|^4.0",
+                "symfony/process": "^2.8|^3.0|^4.0"
             },
             "type": "library",
             "autoload": {
@@ -973,7 +1249,65 @@
                 }
             ],
             "description": "Locale functions required by libphonenumber-for-php",
-            "time": "2017-11-01T21:34:27+00:00"
+            "time": "2018-04-03T15:53:12+00:00"
+        },
+        {
+            "name": "imagine/imagine",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/avalanche123/Imagine.git",
+                "reference": "f2919909f5c43ddf0aea373f460d86f1ea45811c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/f2919909f5c43ddf0aea373f460d86f1ea45811c",
+                "reference": "f2919909f5c43ddf0aea373f460d86f1ea45811c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "sami/sami": "^3.3",
+                "symfony/phpunit-bridge": "^3.2 || ^4.0"
+            },
+            "suggest": {
+                "ext-gd": "to use the GD implementation",
+                "ext-gmagick": "to use the Gmagick implementation",
+                "ext-imagick": "to use the Imagick implementation"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "0.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Imagine": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bulat Shakirzyanov",
+                    "email": "mallluhuct@gmail.com",
+                    "homepage": "http://avalanche123.com"
+                }
+            ],
+            "description": "Image processing for PHP 5.3",
+            "homepage": "http://imagine.readthedocs.org/",
+            "keywords": [
+                "drawing",
+                "graphics",
+                "image manipulation",
+                "image processing"
+            ],
+            "time": "2018-02-12T12:28:52+00:00"
         },
         {
             "name": "kartik-v/bootstrap-fileinput",
@@ -1027,97 +1361,6 @@
                 "upload"
             ],
             "time": "2018-03-23T10:12:29+00:00"
-        },
-        {
-            "name": "kartik-v/bootstrap-star-rating",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kartik-v/bootstrap-star-rating.git",
-                "reference": "19120d91a4495abd181c7d4cbb69da73537093af"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/bootstrap-star-rating/zipball/19120d91a4495abd181c7d4cbb69da73537093af",
-                "reference": "19120d91a4495abd181c7d4cbb69da73537093af",
-                "shasum": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.0.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kartik Visweswaran",
-                    "email": "kartikv2@gmail.com",
-                    "homepage": "http://www.krajee.com/"
-                }
-            ],
-            "description": "A simple yet powerful JQuery star rating plugin for Bootstrap.",
-            "homepage": "https://github.com/kartik-v/bootstrap-star-rating",
-            "keywords": [
-                "Rating",
-                "awesome",
-                "bootstrap",
-                "font",
-                "glyphicon",
-                "star",
-                "svg"
-            ],
-            "time": "2017-11-03T07:22:19+00:00"
-        },
-        {
-            "name": "kartik-v/dependent-dropdown",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kartik-v/dependent-dropdown.git",
-                "reference": "1349e7f5816a65e89bc227098386aac5b2c89363"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/dependent-dropdown/zipball/1349e7f5816a65e89bc227098386aac5b2c89363",
-                "reference": "1349e7f5816a65e89bc227098386aac5b2c89363",
-                "shasum": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.4.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "kartik\\plugins\\depdrop\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kartik Visweswaran",
-                    "email": "kartikv2@gmail.com",
-                    "homepage": "http://www.krajee.com/"
-                }
-            ],
-            "description": "A multi level dependent dropdown JQuery plugin that allows nested dependencies.",
-            "homepage": "https://github.com/kartik-v/dependent-dropdown",
-            "keywords": [
-                "dependent",
-                "dropdown",
-                "jquery",
-                "option",
-                "select"
-            ],
-            "time": "2017-08-01T11:43:55+00:00"
         },
         {
             "name": "kartik-v/yii2-dialog",
@@ -1298,12 +1541,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-grid.git",
-                "reference": "11d73b6ecc66558a6c5b835c16c7439382094256"
+                "reference": "3b0bc0268f11a5eb49be6ebb010e2327525052f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-grid/zipball/11d73b6ecc66558a6c5b835c16c7439382094256",
-                "reference": "11d73b6ecc66558a6c5b835c16c7439382094256",
+                "url": "https://api.github.com/repos/kartik-v/yii2-grid/zipball/3b0bc0268f11a5eb49be6ebb010e2327525052f8",
+                "reference": "3b0bc0268f11a5eb49be6ebb010e2327525052f8",
                 "shasum": ""
             },
             "require": {
@@ -1343,7 +1586,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2018-03-24T04:49:51+00:00"
+            "time": "2018-04-02T18:33:19+00:00"
         },
         {
             "name": "kartik-v/yii2-krajee-base",
@@ -1548,316 +1791,6 @@
             "time": "2018-03-17T05:06:02+00:00"
         },
         {
-            "name": "kartik-v/yii2-widget-affix",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kartik-v/yii2-widget-affix.git",
-                "reference": "7f3266b1989ffd54a7025c4b1a322fcec38a9665"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-affix/zipball/7f3266b1989ffd54a7025c4b1a322fcec38a9665",
-                "reference": "7f3266b1989ffd54a7025c4b1a322fcec38a9665",
-                "shasum": ""
-            },
-            "require": {
-                "kartik-v/yii2-krajee-base": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "kartik\\affix\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kartik Visweswaran",
-                    "email": "kartikv2@gmail.com",
-                    "homepage": "http://www.krajee.com/"
-                }
-            ],
-            "description": "A scrollspy and affixed enhanced navigation to highlight page sections (sub repo split from yii2-widgets)",
-            "homepage": "https://github.com/kartik-v/yii2-widget-affix",
-            "keywords": [
-                "affix",
-                "bootstrap",
-                "extension",
-                "jquery",
-                "navigation",
-                "plugin",
-                "scrollspy",
-                "widget",
-                "yii2"
-            ],
-            "time": "2018-02-07T11:46:39+00:00"
-        },
-        {
-            "name": "kartik-v/yii2-widget-alert",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kartik-v/yii2-widget-alert.git",
-                "reference": "604670a55bdaed99482b5df18a36352aad3fb82c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-alert/zipball/604670a55bdaed99482b5df18a36352aad3fb82c",
-                "reference": "604670a55bdaed99482b5df18a36352aad3fb82c",
-                "shasum": ""
-            },
-            "require": {
-                "kartik-v/yii2-krajee-base": "*"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "kartik\\alert\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kartik Visweswaran",
-                    "email": "kartikv2@gmail.com",
-                    "homepage": "http://www.krajee.com/"
-                }
-            ],
-            "description": "A widget to generate alert based notifications using bootstrap-alert plugin (sub repo split from yii2-widgets)",
-            "homepage": "https://github.com/kartik-v/yii2-widget-alert",
-            "keywords": [
-                "alert",
-                "block",
-                "bootstrap",
-                "extension",
-                "flash",
-                "jquery",
-                "notification",
-                "plugin",
-                "widget",
-                "yii2"
-            ],
-            "time": "2018-02-07T11:43:46+00:00"
-        },
-        {
-            "name": "kartik-v/yii2-widget-colorinput",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kartik-v/yii2-widget-colorinput.git",
-                "reference": "86a6ebace9e9a67396c0ed65d8a16090ba1c7324"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-colorinput/zipball/86a6ebace9e9a67396c0ed65d8a16090ba1c7324",
-                "reference": "86a6ebace9e9a67396c0ed65d8a16090ba1c7324",
-                "shasum": ""
-            },
-            "require": {
-                "kartik-v/yii2-krajee-base": "*"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "kartik\\color\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kartik Visweswaran",
-                    "email": "kartikv2@gmail.com",
-                    "homepage": "http://www.krajee.com/"
-                }
-            ],
-            "description": "An enhanced Yii 2 widget encapsulating the HTML 5 color input (sub repo split from yii2-widgets)",
-            "homepage": "https://github.com/kartik-v/yii2-widget-colorinput",
-            "keywords": [
-                "HTML5",
-                "color",
-                "extension",
-                "form",
-                "input",
-                "jquery",
-                "plugin",
-                "widget",
-                "yii2"
-            ],
-            "time": "2018-02-07T11:44:04+00:00"
-        },
-        {
-            "name": "kartik-v/yii2-widget-datepicker",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kartik-v/yii2-widget-datepicker.git",
-                "reference": "eb7e829b8a0b341dc22ef2dc28d1bb4ff08e3550"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-datepicker/zipball/eb7e829b8a0b341dc22ef2dc28d1bb4ff08e3550",
-                "reference": "eb7e829b8a0b341dc22ef2dc28d1bb4ff08e3550",
-                "shasum": ""
-            },
-            "require": {
-                "kartik-v/yii2-krajee-base": "~1.7"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.4.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "kartik\\date\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kartik Visweswaran",
-                    "email": "kartikv2@gmail.com",
-                    "homepage": "http://www.krajee.com/"
-                }
-            ],
-            "description": "Enhanced Yii2 wrapper for the bootstrap datepicker plugin (sub repo split from yii2-widgets).",
-            "homepage": "https://github.com/kartik-v/yii2-widget-datepicker",
-            "keywords": [
-                "date",
-                "extension",
-                "form",
-                "jquery",
-                "picker",
-                "plugin",
-                "select2",
-                "widget",
-                "yii2"
-            ],
-            "time": "2017-09-06T06:18:08+00:00"
-        },
-        {
-            "name": "kartik-v/yii2-widget-datetimepicker",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kartik-v/yii2-widget-datetimepicker.git",
-                "reference": "36f8327bbac47da7f3a38c94f0546308337aa963"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-datetimepicker/zipball/36f8327bbac47da7f3a38c94f0546308337aa963",
-                "reference": "36f8327bbac47da7f3a38c94f0546308337aa963",
-                "shasum": ""
-            },
-            "require": {
-                "kartik-v/yii2-krajee-base": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "kartik\\datetime\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kartik Visweswaran",
-                    "email": "kartikv2@gmail.com",
-                    "homepage": "http://www.krajee.com/"
-                }
-            ],
-            "description": "Enhanced Yii2 wrapper for the bootstrap datetimepicker plugin (sub repo split from yii2-widgets)",
-            "homepage": "https://github.com/kartik-v/yii2-widget-datetimepicker",
-            "keywords": [
-                "datetime",
-                "extension",
-                "form",
-                "jquery",
-                "picker",
-                "plugin",
-                "select2",
-                "widget",
-                "yii2"
-            ],
-            "time": "2017-07-18T08:42:00+00:00"
-        },
-        {
-            "name": "kartik-v/yii2-widget-depdrop",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kartik-v/yii2-widget-depdrop.git",
-                "reference": "a86b48bdb350c4db9f6e070a07471889171196b8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-depdrop/zipball/a86b48bdb350c4db9f6e070a07471889171196b8",
-                "reference": "a86b48bdb350c4db9f6e070a07471889171196b8",
-                "shasum": ""
-            },
-            "require": {
-                "kartik-v/dependent-dropdown": "~1.4",
-                "kartik-v/yii2-krajee-base": "~1.7"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "kartik\\depdrop\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kartik Visweswaran",
-                    "email": "kartikv2@gmail.com",
-                    "homepage": "http://www.krajee.com/"
-                }
-            ],
-            "description": "Widget that enables setting up dependent dropdowns with nested dependencies (sub repo split from yii2-widgets)",
-            "homepage": "https://github.com/kartik-v/yii2-widget-depdrop",
-            "keywords": [
-                "dependent",
-                "dropdown",
-                "extension",
-                "form",
-                "jquery",
-                "plugin",
-                "widget",
-                "yii2"
-            ],
-            "time": "2018-03-24T08:46:26+00:00"
-        },
-        {
             "name": "kartik-v/yii2-widget-fileinput",
             "version": "dev-master",
             "source": {
@@ -1913,160 +1846,6 @@
             "time": "2017-12-06T12:34:31+00:00"
         },
         {
-            "name": "kartik-v/yii2-widget-growl",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kartik-v/yii2-widget-growl.git",
-                "reference": "c79abaa47e9103e93345cd1eca7bc75e17e9a92e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-growl/zipball/c79abaa47e9103e93345cd1eca7bc75e17e9a92e",
-                "reference": "c79abaa47e9103e93345cd1eca7bc75e17e9a92e",
-                "shasum": ""
-            },
-            "require": {
-                "kartik-v/yii2-krajee-base": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "kartik\\growl\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD 3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kartik Visweswaran",
-                    "email": "kartikv2@gmail.com",
-                    "homepage": "http://www.krajee.com/"
-                }
-            ],
-            "description": "A widget to generate growl based notifications using bootstrap-growl plugin (sub repo split from yii2-widgets)",
-            "homepage": "https://github.com/kartik-v/yii2-widget-growl",
-            "keywords": [
-                "alert",
-                "bootstrap",
-                "extension",
-                "growl",
-                "jquery",
-                "notification",
-                "plugin",
-                "widget",
-                "yii2"
-            ],
-            "time": "2015-05-03T08:23:04+00:00"
-        },
-        {
-            "name": "kartik-v/yii2-widget-rangeinput",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kartik-v/yii2-widget-rangeinput.git",
-                "reference": "78f03bc71c1ef02258d46da08e21a2cdd0b58fab"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-rangeinput/zipball/78f03bc71c1ef02258d46da08e21a2cdd0b58fab",
-                "reference": "78f03bc71c1ef02258d46da08e21a2cdd0b58fab",
-                "shasum": ""
-            },
-            "require": {
-                "kartik-v/yii2-krajee-base": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "kartik\\range\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kartik Visweswaran",
-                    "email": "kartikv2@gmail.com",
-                    "homepage": "http://www.krajee.com/"
-                }
-            ],
-            "description": "An enhanced Yii 2 widget encapsulating the HTML 5 range input (sub repo split from yii2-widgets)",
-            "homepage": "https://github.com/kartik-v/yii2-widget-rangeinput",
-            "keywords": [
-                "HTML5",
-                "extension",
-                "form",
-                "input",
-                "jquery",
-                "plugin",
-                "range",
-                "widget",
-                "yii2"
-            ],
-            "time": "2018-02-07T11:43:17+00:00"
-        },
-        {
-            "name": "kartik-v/yii2-widget-rating",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kartik-v/yii2-widget-rating.git",
-                "reference": "5d022668555303c3963582af91beb4a6c9f94243"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-rating/zipball/5d022668555303c3963582af91beb4a6c9f94243",
-                "reference": "5d022668555303c3963582af91beb4a6c9f94243",
-                "shasum": ""
-            },
-            "require": {
-                "kartik-v/bootstrap-star-rating": "*",
-                "kartik-v/yii2-krajee-base": "*"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "kartik\\rating\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD 3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kartik Visweswaran",
-                    "email": "kartikv2@gmail.com",
-                    "homepage": "http://www.krajee.com/"
-                }
-            ],
-            "description": "A Yii2 widget for the simple yet powerful bootstrap-star-rating plugin with fractional rating support (sub repo split from yii2-widgets)",
-            "homepage": "https://github.com/kartik-v/yii2-widget-rating",
-            "keywords": [
-                "Rating",
-                "bootstrap",
-                "extension",
-                "form",
-                "input",
-                "jquery",
-                "plugin",
-                "star",
-                "widget",
-                "yii2"
-            ],
-            "time": "2017-11-18T12:24:51+00:00"
-        },
-        {
             "name": "kartik-v/yii2-widget-select2",
             "version": "dev-master",
             "source": {
@@ -2118,372 +1897,6 @@
                 "yii2"
             ],
             "time": "2018-02-24T05:28:25+00:00"
-        },
-        {
-            "name": "kartik-v/yii2-widget-sidenav",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kartik-v/yii2-widget-sidenav.git",
-                "reference": "54186e7f127dd5fc7ea3af0ac22d5f1ddd427a63"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-sidenav/zipball/54186e7f127dd5fc7ea3af0ac22d5f1ddd427a63",
-                "reference": "54186e7f127dd5fc7ea3af0ac22d5f1ddd427a63",
-                "shasum": ""
-            },
-            "require": {
-                "kartik-v/yii2-krajee-base": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "kartik\\sidenav\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD 3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kartik Visweswaran",
-                    "email": "kartikv2@gmail.com",
-                    "homepage": "http://www.krajee.com/"
-                }
-            ],
-            "description": "An enhanced side navigation menu styled for bootstrap (sub repo split from yii2-widgets)",
-            "homepage": "https://github.com/kartik-v/yii2-widget-sidenav",
-            "keywords": [
-                "bootstrap",
-                "extension",
-                "jquery",
-                "menu",
-                "navigation",
-                "plugin",
-                "sidenav",
-                "widget",
-                "yii2"
-            ],
-            "time": "2015-04-21T15:38:40+00:00"
-        },
-        {
-            "name": "kartik-v/yii2-widget-spinner",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kartik-v/yii2-widget-spinner.git",
-                "reference": "ab8087f00ad4a818d343c6e5f44cf7364b3c6c8f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-spinner/zipball/ab8087f00ad4a818d343c6e5f44cf7364b3c6c8f",
-                "reference": "ab8087f00ad4a818d343c6e5f44cf7364b3c6c8f",
-                "shasum": ""
-            },
-            "require": {
-                "kartik-v/yii2-krajee-base": "~1.7"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "kartik\\spinner\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kartik Visweswaran",
-                    "email": "kartikv2@gmail.com",
-                    "homepage": "http://www.krajee.com/"
-                }
-            ],
-            "description": "A widget to render animated CSS3 loading spinners with VML fallback for IE (sub repo split from yii2-widgets)",
-            "homepage": "https://github.com/kartik-v/yii2-widget-spinner",
-            "keywords": [
-                "CSS3",
-                "extension",
-                "jquery",
-                "loading",
-                "plugin",
-                "spinner",
-                "widget",
-                "yii2"
-            ],
-            "time": "2018-02-07T11:45:36+00:00"
-        },
-        {
-            "name": "kartik-v/yii2-widget-switchinput",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kartik-v/yii2-widget-switchinput.git",
-                "reference": "10afe2ac8274da9371b43aaf69e99fc553f1b947"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-switchinput/zipball/10afe2ac8274da9371b43aaf69e99fc553f1b947",
-                "reference": "10afe2ac8274da9371b43aaf69e99fc553f1b947",
-                "shasum": ""
-            },
-            "require": {
-                "kartik-v/yii2-krajee-base": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "kartik\\switchinput\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kartik Visweswaran",
-                    "email": "kartikv2@gmail.com",
-                    "homepage": "http://www.krajee.com/"
-                }
-            ],
-            "description": "A Yii2 wrapper widget for the Bootstrap Switch plugin to use checkboxes & radios as toggle switchinputes (sub repo split from yii2-widgets)",
-            "homepage": "https://github.com/kartik-v/yii2-widget-switchinput",
-            "keywords": [
-                "bootstrap",
-                "extension",
-                "form",
-                "input",
-                "jquery",
-                "plugin",
-                "switchinput",
-                "toggle",
-                "widget",
-                "yii2"
-            ],
-            "time": "2018-02-07T11:45:58+00:00"
-        },
-        {
-            "name": "kartik-v/yii2-widget-timepicker",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kartik-v/yii2-widget-timepicker.git",
-                "reference": "d8d12fa107dec612914393d74d551b4368ffeec2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-timepicker/zipball/d8d12fa107dec612914393d74d551b4368ffeec2",
-                "reference": "d8d12fa107dec612914393d74d551b4368ffeec2",
-                "shasum": ""
-            },
-            "require": {
-                "kartik-v/yii2-krajee-base": "*"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "kartik\\time\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kartik Visweswaran",
-                    "email": "kartikv2@gmail.com",
-                    "homepage": "http://www.krajee.com/"
-                }
-            ],
-            "description": "Enhanced Yii2 wrapper for the bootstrap timepicker plugin (sub repo split from yii2-widgets)",
-            "homepage": "https://github.com/kartik-v/yii2-widget-timepicker",
-            "keywords": [
-                "bootstrap",
-                "extension",
-                "form",
-                "jquery",
-                "picker",
-                "plugin",
-                "time",
-                "widget",
-                "yii2"
-            ],
-            "time": "2018-02-07T11:49:20+00:00"
-        },
-        {
-            "name": "kartik-v/yii2-widget-touchspin",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kartik-v/yii2-widget-touchspin.git",
-                "reference": "ba819f8883873fc9e375a05907dfdc1d3d0f3dcd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-touchspin/zipball/ba819f8883873fc9e375a05907dfdc1d3d0f3dcd",
-                "reference": "ba819f8883873fc9e375a05907dfdc1d3d0f3dcd",
-                "shasum": ""
-            },
-            "require": {
-                "kartik-v/yii2-krajee-base": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "kartik\\touchspin\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kartik Visweswaran",
-                    "email": "kartikv2@gmail.com",
-                    "homepage": "http://www.krajee.com/"
-                }
-            ],
-            "description": "A Yii2 wrapper widget for the Bootstrap Switch plugin to use checkboxes & radios as toggle touchspines (sub repo split from yii2-widgets)",
-            "homepage": "https://github.com/kartik-v/yii2-widget-touchspin",
-            "keywords": [
-                "bootstrap",
-                "extension",
-                "form",
-                "input",
-                "jquery",
-                "plugin",
-                "spinner",
-                "touch",
-                "widget",
-                "yii2"
-            ],
-            "time": "2018-02-07T11:46:17+00:00"
-        },
-        {
-            "name": "kartik-v/yii2-widget-typeahead",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kartik-v/yii2-widget-typeahead.git",
-                "reference": "5b459d969e45f33d7e66412755d52d0d12fe53b6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-typeahead/zipball/5b459d969e45f33d7e66412755d52d0d12fe53b6",
-                "reference": "5b459d969e45f33d7e66412755d52d0d12fe53b6",
-                "shasum": ""
-            },
-            "require": {
-                "kartik-v/yii2-krajee-base": "~1.8"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "kartik\\typeahead\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kartik Visweswaran",
-                    "email": "kartikv2@gmail.com",
-                    "homepage": "http://www.krajee.com/"
-                }
-            ],
-            "description": "Enhanced Yii2 wrapper for the Twitter Typeahead plugin (sub repo split from yii2-widgets).",
-            "homepage": "https://github.com/kartik-v/yii2-widget-typeahead",
-            "keywords": [
-                "dropdown",
-                "extension",
-                "form",
-                "jquery",
-                "plugin",
-                "typeahead",
-                "widget",
-                "yii2"
-            ],
-            "time": "2017-08-01T04:05:16+00:00"
-        },
-        {
-            "name": "kartik-v/yii2-widgets",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kartik-v/yii2-widgets.git",
-                "reference": "24d3a3942a5943233d912b3adc06b3beae3dd076"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widgets/zipball/24d3a3942a5943233d912b3adc06b3beae3dd076",
-                "reference": "24d3a3942a5943233d912b3adc06b3beae3dd076",
-                "shasum": ""
-            },
-            "require": {
-                "kartik-v/yii2-krajee-base": "*",
-                "kartik-v/yii2-widget-activeform": "*",
-                "kartik-v/yii2-widget-affix": "*",
-                "kartik-v/yii2-widget-alert": "*",
-                "kartik-v/yii2-widget-colorinput": "*",
-                "kartik-v/yii2-widget-datepicker": "*",
-                "kartik-v/yii2-widget-datetimepicker": "*",
-                "kartik-v/yii2-widget-depdrop": "*",
-                "kartik-v/yii2-widget-fileinput": "*",
-                "kartik-v/yii2-widget-growl": "*",
-                "kartik-v/yii2-widget-rangeinput": "*",
-                "kartik-v/yii2-widget-rating": "*",
-                "kartik-v/yii2-widget-select2": "*",
-                "kartik-v/yii2-widget-sidenav": "*",
-                "kartik-v/yii2-widget-spinner": "*",
-                "kartik-v/yii2-widget-switchinput": "*",
-                "kartik-v/yii2-widget-timepicker": "*",
-                "kartik-v/yii2-widget-touchspin": "*",
-                "kartik-v/yii2-widget-typeahead": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "kartik\\widgets\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD 3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kartik Visweswaran",
-                    "email": "kartikv2@gmail.com",
-                    "homepage": "http://www.krajee.com/"
-                }
-            ],
-            "description": "Collection of useful widgets for Yii Framework 2.0 extending functionalities for Bootstrap",
-            "homepage": "https://github.com/kartik-v/yii2-widgets",
-            "keywords": [
-                "extension",
-                "form",
-                "widget",
-                "yii2"
-            ],
-            "time": "2015-12-05T10:37:16+00:00"
         },
         {
             "name": "machour/yii2-notifications",
@@ -2540,12 +1953,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mpdf/mpdf.git",
-                "reference": "89ea84ff3d1a00001e073472adf9c1149aa0f8d0"
+                "reference": "1fd89d6e57f988beb1c79c8b42da29211981a1e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mpdf/mpdf/zipball/89ea84ff3d1a00001e073472adf9c1149aa0f8d0",
-                "reference": "89ea84ff3d1a00001e073472adf9c1149aa0f8d0",
+                "url": "https://api.github.com/repos/mpdf/mpdf/zipball/1fd89d6e57f988beb1c79c8b42da29211981a1e9",
+                "reference": "1fd89d6e57f988beb1c79c8b42da29211981a1e9",
                 "shasum": ""
             },
             "require": {
@@ -2599,7 +2012,48 @@
                 "php",
                 "utf-8"
             ],
-            "time": "2018-03-09T09:51:52+00:00"
+            "time": "2018-04-03T08:09:11+00:00"
+        },
+        {
+            "name": "navatech/yii2-cropper",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/navatech/yii2-cropper.git",
+                "reference": "3bf4868aa085a40f48faad7fb837b05b7c5ab7cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/navatech/yii2-cropper/zipball/3bf4868aa085a40f48faad7fb837b05b7c5ab7cb",
+                "reference": "3bf4868aa085a40f48faad7fb837b05b7c5ab7cb",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/cropper": "*",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "navatech\\cropper\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Le Phuong",
+                    "email": "phuong17889@gmail.com"
+                }
+            ],
+            "description": "Yii2 Cropper",
+            "keywords": [
+                "extension",
+                "yii2"
+            ],
+            "time": "2016-11-07T18:25:33+00:00"
         },
         {
             "name": "nex/yii2-datepicker",
@@ -2651,59 +2105,6 @@
             "time": "2018-01-30T04:44:28+00:00"
         },
         {
-            "name": "nirvana-msu/yii2-showloading",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nirvana-msu/yii2-showloading.git",
-                "reference": "23a3b97ec6323b88fbfbf881270cee01b2534e25"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nirvana-msu/yii2-showloading/zipball/23a3b97ec6323b88fbfbf881270cee01b2534e25",
-                "reference": "23a3b97ec6323b88fbfbf881270cee01b2534e25",
-                "shasum": ""
-            },
-            "require": {
-                "yiisoft/yii2": "*"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "nirvana\\showloading\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alexander Stepanov",
-                    "email": "student_vmk@mail.ru"
-                },
-                {
-                    "name": "Jim Keller",
-                    "homepage": "http://www.contextllc.com"
-                }
-            ],
-            "description": "Yii2 extension for showLoading jQuery plugin",
-            "keywords": [
-                "ajax",
-                "jquery",
-                "plugin",
-                "showLoading",
-                "widget",
-                "yii2"
-            ],
-            "time": "2015-01-11T18:55:14+00:00"
-        },
-        {
             "name": "paragonie/random_compat",
             "version": "v2.0.11",
             "source": {
@@ -2752,28 +2153,28 @@
             "time": "2017-09-27T21:40:39+00:00"
         },
         {
-            "name": "phpnt/yii2-chartjs",
-            "version": "0.0.2",
+            "name": "phpnt/animate-css",
+            "version": "0.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/phpnt/yii2-chartjs.git",
-                "reference": "ce836c38180bc7a6509d3e96b668f7976058ed3c"
+                "url": "https://github.com/phpnt/animate-css.git",
+                "reference": "19a5a4634b52d970aba973023fc2d8ac6d5b6317"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpnt/yii2-chartjs/zipball/ce836c38180bc7a6509d3e96b668f7976058ed3c",
-                "reference": "ce836c38180bc7a6509d3e96b668f7976058ed3c",
+                "url": "https://api.github.com/repos/phpnt/animate-css/zipball/19a5a4634b52d970aba973023fc2d8ac6d5b6317",
+                "reference": "19a5a4634b52d970aba973023fc2d8ac6d5b6317",
                 "shasum": ""
             },
             "require": {
-                "bower-asset/chart.js": "*",
+                "bower-asset/animate.css": "*",
                 "php": ">=5.4.0",
                 "yiisoft/yii2": "*"
             },
             "type": "yii2-extension",
             "autoload": {
                 "psr-4": {
-                    "phpnt\\chartJS\\": ""
+                    "phpnt\\animateCss\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2787,16 +2188,108 @@
                     "homepage": "http://phpnt.com"
                 }
             ],
-            "description": "Yii2 chartjs",
+            "description": "Yii2 Animate CSS Asset",
             "keywords": [
-                "Chart.js",
-                "chart js",
-                "chartjs",
+                "animate",
+                "css",
                 "phpnt",
-                "yii2",
-                "yii2 chartjs"
+                "widget",
+                "yii2"
             ],
-            "time": "2017-04-29T03:43:19+00:00"
+            "time": "2016-07-02T14:52:01+00:00"
+        },
+        {
+            "name": "phpnt/bootstrap-notify",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpnt/bootstrap-notify.git",
+                "reference": "80a056fce0977ab478c16dd62f70f7212850be56"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpnt/bootstrap-notify/zipball/80a056fce0977ab478c16dd62f70f7212850be56",
+                "reference": "80a056fce0977ab478c16dd62f70f7212850be56",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/bootstrap.growl": "*",
+                "php": ">=5.4.0",
+                "phpnt/animate-css": "^0.0.1",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "phpnt\\bootstrapNotify\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "phpNT",
+                    "email": "phpnt@phpnt.com",
+                    "homepage": "http://phpnt.com"
+                }
+            ],
+            "description": "Yii2 Bootstrap Notify",
+            "keywords": [
+                "bootstrap-growl",
+                "bootstrap-notify",
+                "growl",
+                "notify",
+                "widget",
+                "yii2"
+            ],
+            "time": "2016-07-05T11:10:10+00:00"
+        },
+        {
+            "name": "phpnt/yii2-cropper",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpnt/yii2-cropper.git",
+                "reference": "ad1745d4fb9d5a0450e2c90739ce9e605418359d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpnt/yii2-cropper/zipball/ad1745d4fb9d5a0450e2c90739ce9e605418359d",
+                "reference": "ad1745d4fb9d5a0450e2c90739ce9e605418359d",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/cropper": "*",
+                "php": ">=5.4.0",
+                "phpnt/bootstrap-notify": "*",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "phpnt\\cropper\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "phpNT",
+                    "email": "phpnt@phpnt.com",
+                    "homepage": "http://phpnt.com"
+                }
+            ],
+            "description": "Yii2 Cropper",
+            "keywords": [
+                "cropper",
+                "phpnt",
+                "yii2"
+            ],
+            "time": "2016-10-31T03:51:19+00:00"
         },
         {
             "name": "phpoffice/phpspreadsheet",
@@ -2885,17 +2378,65 @@
             "time": "2018-03-04T20:41:15+00:00"
         },
         {
+            "name": "pistol88/yii2-gallery",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pistol88/yii2-gallery.git",
+                "reference": "82c9e50b136ec0e2faa1365a565905960c6a5570"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pistol88/yii2-gallery/zipball/82c9e50b136ec0e2faa1365a565905960c6a5570",
+                "reference": "82c9e50b136ec0e2faa1365a565905960c6a5570",
+                "shasum": ""
+            },
+            "require": {
+                "abeautifulsite/simpleimage": "2.*",
+                "kartik-v/yii2-widget-fileinput": "*",
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "*",
+                "yiisoft/yii2-bootstrap": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "pistol88\\gallery\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ilya Pistol",
+                    "email": "pistol88@gmail.com"
+                }
+            ],
+            "description": "Модуль позволяет загружать виджетом картинки",
+            "homepage": "https://github.com/pistol88/yii2-gallery",
+            "keywords": [
+                "application",
+                "images",
+                "pistol88",
+                "yii2",
+                "yii2-images"
+            ],
+            "time": "2017-08-10T04:15:26+00:00"
+        },
+        {
             "name": "psr/log",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+                "reference": "3490ba5925e6dcbe6de950c5c6b8dce9f6e96eda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
-                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/3490ba5925e6dcbe6de950c5c6b8dce9f6e96eda",
+                "reference": "3490ba5925e6dcbe6de950c5c6b8dce9f6e96eda",
                 "shasum": ""
             },
             "require": {
@@ -2929,7 +2470,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10T12:19:37+00:00"
+            "time": "2018-04-03T15:59:15+00:00"
         },
         {
             "name": "psr/simple-cache",
@@ -2981,16 +2522,16 @@
         },
         {
             "name": "rmrevin/yii2-fontawesome",
-            "version": "2.17.1",
+            "version": "2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmrevin/yii2-fontawesome.git",
-                "reference": "65ce306da864f4d558348aeba040ed7876878090"
+                "reference": "2ebb38f62727a46dcd06d27bb73c4a5833b54f74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmrevin/yii2-fontawesome/zipball/65ce306da864f4d558348aeba040ed7876878090",
-                "reference": "65ce306da864f4d558348aeba040ed7876878090",
+                "url": "https://api.github.com/repos/rmrevin/yii2-fontawesome/zipball/2ebb38f62727a46dcd06d27bb73c4a5833b54f74",
+                "reference": "2ebb38f62727a46dcd06d27bb73c4a5833b54f74",
                 "shasum": ""
             },
             "require": {
@@ -3029,7 +2570,7 @@
                 "font",
                 "yii"
             ],
-            "time": "2017-01-11T14:05:47+00:00"
+            "time": "2017-04-03T14:19:13+00:00"
         },
         {
             "name": "setasign/fpdi",
@@ -3388,12 +2929,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-bootstrap.git",
-                "reference": "0c74f9c383f366e8cd0892fccb2158bf52a0839e"
+                "reference": "8f5bdde6192b8f9a3950271754f9286f410cfdf4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/0c74f9c383f366e8cd0892fccb2158bf52a0839e",
-                "reference": "0c74f9c383f366e8cd0892fccb2158bf52a0839e",
+                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/8f5bdde6192b8f9a3950271754f9286f410cfdf4",
+                "reference": "8f5bdde6192b8f9a3950271754f9286f410cfdf4",
                 "shasum": ""
             },
             "require": {
@@ -3440,7 +2981,7 @@
                 "bootstrap",
                 "yii2"
             ],
-            "time": "2018-03-14T22:31:15+00:00"
+            "time": "2018-04-03T14:07:30+00:00"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -3542,6 +3083,54 @@
                 "yii2"
             ],
             "time": "2018-02-13T15:12:07+00:00"
+        },
+        {
+            "name": "yiisoft/yii2-imagine",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-imagine.git",
+                "reference": "075ea291c0d0933621cf15f3b64bfb13c9cdb37a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-imagine/zipball/075ea291c0d0933621cf15f3b64bfb13c9cdb37a",
+                "reference": "075ea291c0d0933621cf15f3b64bfb13c9cdb37a",
+                "shasum": ""
+            },
+            "require": {
+                "imagine/imagine": "~0.6.0 | ~0.7.1",
+                "yiisoft/yii2": "~2.0.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\imagine\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Antonio Ramirez",
+                    "email": "amigo.cobos@gmail.com"
+                }
+            ],
+            "description": "The Imagine integration for the Yii framework",
+            "keywords": [
+                "helper",
+                "image",
+                "imagine",
+                "yii2"
+            ],
+            "time": "2018-03-14T22:39:03+00:00"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
@@ -3737,17 +3326,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/base.git",
-                "reference": "b8f173dfb3eecbfe46becb392b14e793853336e6"
+                "reference": "fb07b713f2a97cdf0c5c81c93fa26a0785eb44a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/base/zipball/b8f173dfb3eecbfe46becb392b14e793853336e6",
-                "reference": "b8f173dfb3eecbfe46becb392b14e793853336e6",
+                "url": "https://api.github.com/repos/Codeception/base/zipball/fb07b713f2a97cdf0c5c81c93fa26a0785eb44a6",
+                "reference": "fb07b713f2a97cdf0c5c81c93fa26a0785eb44a6",
                 "shasum": ""
             },
             "require": {
                 "behat/gherkin": "^4.4.0",
-                "codeception/phpunit-wrapper": "^6.0|^7.0",
+                "codeception/phpunit-wrapper": "^6.0.9|^7.0.6",
                 "codeception/stub": "^1.0",
                 "ext-json": "*",
                 "ext-mbstring": "*",
@@ -3818,7 +3407,7 @@
                 "functional testing",
                 "unit testing"
             ],
-            "time": "2018-02-27T00:17:07+00:00"
+            "time": "2018-03-31T22:36:34+00:00"
         },
         {
             "name": "codeception/phpunit-wrapper",
@@ -3826,12 +3415,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/phpunit-wrapper.git",
-                "reference": "42c8fdbf301ee36f6b58cb154972f9148fdcb7d4"
+                "reference": "e8528cb777cf5a5ccea1cf57a3522b142625d1b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/phpunit-wrapper/zipball/42c8fdbf301ee36f6b58cb154972f9148fdcb7d4",
-                "reference": "42c8fdbf301ee36f6b58cb154972f9148fdcb7d4",
+                "url": "https://api.github.com/repos/Codeception/phpunit-wrapper/zipball/e8528cb777cf5a5ccea1cf57a3522b142625d1b5",
+                "reference": "e8528cb777cf5a5ccea1cf57a3522b142625d1b5",
                 "shasum": ""
             },
             "require": {
@@ -3861,7 +3450,7 @@
                 }
             ],
             "description": "PHPUnit classes used by Codeception",
-            "time": "2018-03-16T10:18:33+00:00"
+            "time": "2018-03-31T18:49:51+00:00"
         },
         {
             "name": "codeception/stub",
@@ -4756,12 +4345,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "cd72c4ccaad4249ebdb4252d9ff73955e8a4be02"
+                "reference": "b918d49a622814849ed12588ff0b5224dbab0ab7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/cd72c4ccaad4249ebdb4252d9ff73955e8a4be02",
-                "reference": "cd72c4ccaad4249ebdb4252d9ff73955e8a4be02",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b918d49a622814849ed12588ff0b5224dbab0ab7",
+                "reference": "b918d49a622814849ed12588ff0b5224dbab0ab7",
                 "shasum": ""
             },
             "require": {
@@ -4828,7 +4417,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-03-30T12:35:42+00:00"
+            "time": "2018-04-03T13:15:36+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -4836,12 +4425,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "f18297be46ffe21e82b2b1801fa437e8809ab8c9"
+                "reference": "e87430881d0350549f021774cde397ebac28e972"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/f18297be46ffe21e82b2b1801fa437e8809ab8c9",
-                "reference": "f18297be46ffe21e82b2b1801fa437e8809ab8c9",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/e87430881d0350549f021774cde397ebac28e972",
+                "reference": "e87430881d0350549f021774cde397ebac28e972",
                 "shasum": ""
             },
             "require": {
@@ -4884,7 +4473,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2018-02-21T12:41:00+00:00"
+            "time": "2018-04-02T12:47:08+00:00"
         },
         {
             "name": "psr/http-message",
@@ -5562,12 +5151,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "2cbc8fd7aa798e15848f038a4dcde1e5cff04619"
+                "reference": "0d62adf9f4dc46a837560dee07b2b94675ddc492"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/2cbc8fd7aa798e15848f038a4dcde1e5cff04619",
-                "reference": "2cbc8fd7aa798e15848f038a4dcde1e5cff04619",
+                "url": "https://api.github.com/repos/symfony/console/zipball/0d62adf9f4dc46a837560dee07b2b94675ddc492",
+                "reference": "0d62adf9f4dc46a837560dee07b2b94675ddc492",
                 "shasum": ""
             },
             "require": {
@@ -5622,7 +5211,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2018-03-30T14:57:15+00:00"
+            "time": "2018-04-03T05:25:17+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -5630,12 +5219,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "625895ac44c185117e8f4007352baa33e2e6f250"
+                "reference": "797df6009c3ef46f54156011639a8347115f7223"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/625895ac44c185117e8f4007352baa33e2e6f250",
-                "reference": "625895ac44c185117e8f4007352baa33e2e6f250",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/797df6009c3ef46f54156011639a8347115f7223",
+                "reference": "797df6009c3ef46f54156011639a8347115f7223",
                 "shasum": ""
             },
             "require": {
@@ -5675,7 +5264,7 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-            "time": "2018-03-19T22:38:22+00:00"
+            "time": "2018-03-30T15:58:13+00:00"
         },
         {
             "name": "symfony/dom-crawler",
@@ -5802,12 +5391,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "6347bc280e751bb85b89cdbbda78ea25ffce2287"
+                "reference": "d78fff5c545a7ecb13f17efa8212ba13ef312fd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/6347bc280e751bb85b89cdbbda78ea25ffce2287",
-                "reference": "6347bc280e751bb85b89cdbbda78ea25ffce2287",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/d78fff5c545a7ecb13f17efa8212ba13ef312fd8",
+                "reference": "d78fff5c545a7ecb13f17efa8212ba13ef312fd8",
                 "shasum": ""
             },
             "require": {
@@ -5843,7 +5432,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2018-03-05T18:28:38+00:00"
+            "time": "2018-04-04T05:11:41+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -5910,12 +5499,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "90fbbce247c1bfc12c6618c047d62c288c79e49c"
+                "reference": "97c4a3753f1311c69383a268bf399f9479a4b871"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/90fbbce247c1bfc12c6618c047d62c288c79e49c",
-                "reference": "90fbbce247c1bfc12c6618c047d62c288c79e49c",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/97c4a3753f1311c69383a268bf399f9479a4b871",
+                "reference": "97c4a3753f1311c69383a268bf399f9479a4b871",
                 "shasum": ""
             },
             "require": {
@@ -5960,7 +5549,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2018-02-22T11:40:25+00:00"
+            "time": "2018-04-03T05:25:17+00:00"
         },
         {
             "name": "theseer/tokenizer",
@@ -6203,13 +5792,11 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "nirvana-msu/yii2-showloading": 20,
         "dektrium/yii2-rbac": 20,
-        "kartik-v/yii2-mpdf": 20,
-        "kartik-v/yii2-widget-datepicker": 20,
-        "dvizh/yii2-cart": 20,
+        "costa-rico/yii2-images": 20,
+        "dvizh/yii2-gallery": 20,
         "dvizh/yii2-order": 20,
-        "kartik-v/yii2-widget-fileinput": 20
+        "dvizh/yii2-review": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

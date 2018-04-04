@@ -6,6 +6,10 @@
 use yii\widgets\Menu;
 use yii\helpers\Html;
 use  backend\assets\AppAsset;
+use nirvana\showloading\ShowLoadingAsset;
+
+/* ShowLoadingAsset::register($this); */
+
 $bundle = yiister\gentelella\assets\Asset::register($this);
 ?>
 <?php $this->beginPage(); ?>
@@ -25,7 +29,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-
+<link rel="icon" type="image/png" href="image/favicon.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 
@@ -40,7 +44,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
             <div class="left_col scroll-view">
 
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="/admin" class="site_title"><span>Partner</span></a>
+                    <a href="/" class="site_title"><span>Partner</span></a>
                 </div>
                 <div class="clearfix"></div>
 
@@ -67,7 +71,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                         \yiister\gentelella\widgets\Menu::widget(
                             [
                                 "items" => [
-                                    ["label" => "Home", "url" => "/admin", "icon" => "home"],
+                                    ["label" => "Home", "url" => "/admin", "icon" => "home", 'id' => 'addadadasdsadasd'],
                                    /*  ["label" => "Layout", "url" => ["site/layout"], "icon" => "files-o"],
                                     ["label" => "Error page", "url" => ["site/error-page"], "icon" => "close"], */
                                     [
@@ -209,8 +213,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                 <li><a href="/admin/user/profile">  Profile</a>
                                 </li>
                                 <li>
-                                    <a href="javascript:;">
-                                        <span class="badge bg-red pull-right">50%</span>
+                                    <a href="/admin/user/settings">
                                         <span>Settings</span>
                                     </a>
                                 </li>
@@ -290,6 +293,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
             <div class="clearfix"></div>
 
             <?= $content ?>
+	
         </div>
         <!-- /page content -->
         <!-- footer content -->

@@ -12,20 +12,21 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
+	    
+		'css/style.css',
+        'css/media.css',
+		'js/fancybox/jquery.fancybox.css',
+		'js/assets/owl.carousel.css',
+		'css/font-awesome.css',
+		'js/assets/owl.theme.default.css',
+		'css/site.css',
     ];
     public $js = [
-	/* 'js/jquery.js',
 	'js/fancybox/jquery.fancybox.js',
-	'js/owl.carousel.js',
-	'js/main.js', 
-	'js/bootstrap.js',*/
+    'js/owl.carousel.js',
+	'js/slider.js'
     ];
-/* 	public $jsOptions = [
-	    
-		'position' => \yii\web\View::EVENT_END_BODY,
-	    
-	]; */
+
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',

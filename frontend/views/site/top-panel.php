@@ -8,7 +8,7 @@ use yii\helpers\Url;
             <div class="row">
                 <? foreach($logo as $var):?>
                 <div class="col-sm-3">
-                    <a class="logo" href="index.php">
+                    <a class="logo" href="/">
                         <?= Html::img(Url::toRoute('/admin/partner/' . $var->logo_image, [
                         'class' => 'img-rounded img-responsive',
                         'alt' => '',

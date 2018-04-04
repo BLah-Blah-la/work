@@ -3,7 +3,9 @@ return [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
+		'@advantages' => 'images/Advantages/',
     ],
+
 	'modules' => [
     'user' => [
         'class' => 'dektrium\user\Module',
@@ -13,10 +15,28 @@ return [
         // configure in needed configs
       ],
 	  'rbac' => 'dektrium\rbac\RbacWebModule',
-      'partner' => [
+	  
+	  'partner' => [
             'class' => 'vendor\landing\partner\Module',
-	],
-	],
+        ],
+	  'gallery' => [
+            'class' => 'dvizh\gallery\Module',
+            'imagesStorePath' => dirname(dirname(__DIR__)).'/frontend/web/images/store', //path to origin images
+            'imagesCachePath' => dirname(dirname(__DIR__)).'/frontend/web/images/cache', //path to resized copies
+            'graphicsLibrary' => 'GD',
+            'placeHolderPath' => '@webroot/images/placeHolder.png',
+            'adminRoles' => ['administrator', 'admin', 'superadmin'],
+        ],
+		'review' => [
+            'class' => 'dvizh\review\Module',
+        ],
+    ],
+	'controllerMap' => [
+        'images' => [
+            'class' => 'phpnt\cropper\controllers\ImagesController',
+        ],
+    ],
+	'language' => 'Ru-ru',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
         'cache' => [
@@ -28,8 +48,11 @@ return [
 	'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-        ],	
+        ],
+	/* 'user' => [
+            'identityClass' => 'common\models\User',
+            'enableAutoLogin' => true,
+        ], */	
 
     ],
 ];
-?>

@@ -11,10 +11,9 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-/* 	'layout' => 'oos',
- */    'modules' => [
+    'modules' => [
     'user' => [
-	  
+	   
 	   'modelMap' => [
 	   'RegistrationForm' => 'backend\models\RegistrationForm'
 	   ],
@@ -29,10 +28,12 @@ return [
 		    'baseUrl' => '/admin',
             'csrfParam' => '_csrf-backend',
         ],
+/* 		'timeZone' => 'Asia/Yekaterinburg', */
 		'view'=>[
             'theme'=>[
                 'pathMap'=>[
                   '@dektrium/user/views' => '@backend/views/user',
+				 // '@backend/views/layouts' => '@vendor/yiister/yii2-adminlte/views/layouts',
                 ],
             ],
         ],
@@ -59,7 +60,8 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
              'rules' => [
-			 'clients/<id:\d+>' => 'clients/view',
+		/* 	 'partner/<id:\d+>' => 'partner/landing',
+			 'partner/' => 'partner/landing', */
             ], 
 			
         ],

@@ -23,7 +23,8 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-    
+	<link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 	<?php $this->head() ?>
 </head>
 <body>
@@ -37,8 +38,19 @@ AppAsset::register($this);
         ]) ?>
         <?= Alert::widget() ?>
         <?= $content ?>
+		
+<footer class="container-fluid">
+    <ul>
+        <li>© 2018 KOPOLOVEC</li>
+        <li>+380 (95)-47-02-317</li>
+        <li>brukba123@gmail.com</li>
+    </ul>
+</footer>
 
 <?php $this->endBody() ?>
 </body>
 </html>
+
+
 <?php $this->endPage() ?>
+

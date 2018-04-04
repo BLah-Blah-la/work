@@ -6,6 +6,10 @@
 use yii\widgets\Menu;
 use yii\helpers\Html;
 use  backend\assets\AppAsset;
+use nirvana\showloading\ShowLoadingAsset;
+
+/* ShowLoadingAsset::register($this); */
+
 $bundle = yiister\gentelella\assets\Asset::register($this);
 ?>
 <?php $this->beginPage(); ?>
@@ -25,7 +29,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-
+<link rel="icon" type="image/png" href="/admin/images/favicon.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 
@@ -50,7 +54,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                         <img src="http://placehold.it/128x128" alt="..." class="img-circle profile_img">
                     </div>
                     <div class="profile_info">
-                        <span>Welcome,</span>
+                        <span>Добро пожаловать,</span>
                         <h2><?=Yii::$app->user->identity->username?></h2>
                     </div>
                 </div>
@@ -67,11 +71,11 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                         \yiister\gentelella\widgets\Menu::widget(
                             [
                                 "items" => [
-                                    ["label" => "Home", "url" => "/admin", "icon" => "home"],
+                                    ["label" => "Домашняя страница", "url" => "/admin", "icon" => "home", 'id' => ''],
                                    /*  ["label" => "Layout", "url" => ["site/layout"], "icon" => "files-o"],
                                     ["label" => "Error page", "url" => ["site/error-page"], "icon" => "close"], */
                                     [
-                                        "label" => "Widgets",
+                                        "label" => "Виджеты",
                                         "icon" => "th",
                                         "url" => "#",
                                         "items" => [
@@ -80,7 +84,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                         ],
                                     ],
 									
-                                    [
+                                  /*   [
                                         "label" => "Badges",
                                         "url" => "#",
                                         "icon" => "table",
@@ -103,46 +107,46 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                                 "badgeOptions" => ["class" => "label-danger"],
                                             ],
                                         ],
-                                    ],
+                                    ], */
                                     [
-                                        "label" => "Categories",
+                                        "label" => "Категории",
                                         "url" => "#",
                                         "icon" => "table",
                                         "items" => [
 											
 											[
-                                                "label" => "Contacts",
+                                                "label" => "Контакты",
                                                 "url" => ['/partner/contacts'],
                                             ],
 											
 											[
-                                               'label' => 'Customers', 'url' => ['/partner/customers'],
+                                               'label' => 'Заказчики', 'url' => ['/partner/customers'],
                                             ],
 											
 											[
-                                               'label' => 'Titles', 'url' => ['/partner/titles'],
+                                               'label' => 'Заголовки', 'url' => ['/partner/titles'],
                                             ],
 											
 											[
-                                                'label' => 'Advantages', 'url' => ['/partner/advantages'],
+                                                'label' => 'Преимущества', 'url' => ['/partner/advantages'],
                                             ],
 											
 											[
-                                                'label' => 'Price list', 'url' => ['/partner/price-list'],
+                                                'label' => 'Тарифы', 'url' => ['/partner/price-list'],
                                             ],
 											
 											[
-                                                'label' => 'Reviews', 'url' => ['/partner/reviews'],
+                                                'label' => 'Отзывы', 'url' => ['/partner/reviews'],
                                             ],
 											
 										    [
-                                                'label' => 'Portfolio', 'url' => ['/partner/portfolio'],
+                                                'label' => 'Портфолио', 'url' => ['/partner/portfolio'],
                                             ],
                                             [
-                                                'label' => 'Logo', 'url' => ['/partner/logo'],
+                                                'label' => 'Логотип', 'url' => ['/partner/logo'],
                                             ],
 											[
-                                                'label' => 'Steps', 'url' => ['/partner/steps'],
+                                                'label' => 'Этапы работы', 'url' => ['/partner/steps'],
                                             ],
                                             /* [
                                                 "label" => "Second level 2",
@@ -206,17 +210,14 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                 <span class=" fa fa-angle-down"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                <li><a href="/admin/user/profile">  Profile</a>
+                                <li><a href="/admin/user/profile">  Профиль</a>
                                 </li>
                                 <li>
-                                    <a href="javascript:;">
-                                        <span class="badge bg-red pull-right">50%</span>
-                                        <span>Settings</span>
+                                    <a href="/admin/user/settings">
+                                        <span>Настройки</span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="javascript:;">Help</a>
-                                </li>
+                
 								<?php $options = ['class' => 'fa fa-sign-out pull-right']; 
 								        
 								
@@ -253,7 +254,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                 <li>
                                     <div class="text-center">
                                         <a href="/">
-                                            <strong>See All Alerts</strong>
+                                            <strong>Показать все оповещения</strong>
                                             <i class="fa fa-angle-right"></i>
                                         </a>
                                     </div>
@@ -290,6 +291,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
             <div class="clearfix"></div>
 
             <?= $content ?>
+	
         </div>
         <!-- /page content -->
         <!-- footer content -->

@@ -69,10 +69,10 @@ class ClientPhone extends \yii\db\ActiveRecord
     {
         if (parent::beforeSave($insert)) {
 	    $some = Yii::createObject(SomeAccessories::className());
-		$suka = $this->maximuId()->id;
+		$a = $this->maximuId()->id;
 		
 		$this->phone_digital = $some->NumberUser($this->phone_digital);
-		$this->client_id = $suka;
+		$this->client_id = $a;
 		
             return true;
         } else {

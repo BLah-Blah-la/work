@@ -3,22 +3,11 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\bootstrap\Modal;
 ?>
-
-
-<footer class="container-fluid">
-    <ul>
-        <li>© 2018 KOPOLOVEC</li>
-        <li>+380 (95)-47-02-317</li>
-        <li>brukba123@gmail.com</li>
-    </ul>
-</footer>
-
-
 <!-- Модальное окно -->
 <?php
 Modal::begin([
 'header' => '',
-'options' => ['id'=>'123'],
+'options' => ['id'=>'mal'],
 'class' => 'modal fade',])?>
 <?php Modal::end();?>
 
@@ -52,42 +41,3 @@ Modal::begin([
         </div>
     </div>
 </div>
-<!-- Скрипты -->
-<script src="js/jquery.js" type="text/javascript"></script>
-<script src="js/fancybox/jquery.fancybox.js" type="text/javascript"></script>
-<script src="js/owl.carousel.js" type="text/javascript"></script>
-<script src="js/main.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-    $('*[data-toggle=tooltip]').tooltip();
-    
-    $('.step-slider').owlCarousel({
-        navSpeed:1500,
-        dragEndSpeed:1500,
-        nav:true,
-        dots: false,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:1
-            }
-        }
-    });
-
-    $('.review-slider').owlCarousel({
-        navSpeed:1500,
-        dragEndSpeed:1500,
-        nav:true,
-        dots: true,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:1
-            }
-        }
-    });
-</script>

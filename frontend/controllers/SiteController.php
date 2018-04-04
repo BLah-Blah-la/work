@@ -9,9 +9,8 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use vendor\landing\partner\find\Finder;
 use frontend\models\Model;
-
 use frontend\models\LoginForm;
-
+use frontend\models\Review;
 /**
  * Site controller
  */
@@ -27,7 +26,7 @@ class SiteController extends Controller
                 'class' => AccessControl::className(),
                 'only' => ['logout', 'login'],
                 'rules' => [
-                    /* [
+                    [
                         'actions' => ['logout'],
                         'allow' => true,
                         'roles' => ['@'],
@@ -37,7 +36,7 @@ class SiteController extends Controller
                         'actions' => ['login'],
                         'allow' => true,
                         'roles' => ['?'],
-                    ], */
+                    ],
                 ],
             ],
             'verbs' => [
@@ -70,7 +69,7 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-	public function actionIndex(){
+    public function actionIndex(){
 		
         $model = Yii::createObject(Model::className());
 		
@@ -91,7 +90,10 @@ class SiteController extends Controller
         }
         return $this->render('login', ['model' => $model]);
     }
-		
+    public function actionSome(){
+		$model = new Review();
+		return $this->render('some', ['model'=>$model]);
+	}
 	public function actionLogout()
     {
 
@@ -99,6 +101,5 @@ class SiteController extends Controller
 
         return $this->goHome();
     }
-	
 
 }

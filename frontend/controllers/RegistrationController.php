@@ -13,6 +13,7 @@ use frontend\models\RegistrationForm;
 use frontend\models\RestForm;
 use frontend\models\SomeAccessories;
 use frontend\models\Clients;
+use frontend\models\Advantages;
 /**
  * Site controller
  */
@@ -114,13 +115,27 @@ class RegistrationController extends Controller
 
 	}
 	public function actionSuper(){
-
-		/* $str = '+7992 4205 1 43';
-		$ro = Yii::createObject(SomeAccessories::className());
-		$id = $ro->NumberUser($str); */
-     
-        $model = Yii::createObject(Clients::className());
         
+		$model = new Advantages();
+		
+		$images = $model->getImages();
+        foreach($images as $img) {
+        //retun url to full image
+        echo $img->getUrl();
+
+        //return url to proportionally resized image by width
+        echo $img->getUrl('300x');
+
+        //return url to proportionally resized image by height
+        echo $img->getUrl('x300');
+
+        //return url to resized and cropped (center) image by width and height
+        echo $img->getUrl('200x300');
+    
+        //return description image
+       $img->description;
+}
+		
 		return $this->render('super', ['model' => $model]);
 	}
 
@@ -129,17 +144,9 @@ class RegistrationController extends Controller
 		$array = ['1', '3', '10', '12'];
 		$massiv = [1, 3, 31, 21, 78];
 		$super_massiv = ArrayHelper::isIndexed($array);
-		echo var_dump($super_massiv);
+		echo $super_massiv;
 		
-		$super_massiv = ArrayHelper::isAssociative($massiv);
-	
-		echo var_dump($super_massiv);
-
-	    //$echo = ArrayHelper::multisort($array, DESC);
-		
-		
-		
-		/*for($i = 0; $i<=count($super_massiv); $i++){
+/* 		for($i = 0; $i<=count($super_massiv); $i++){
 			
 			echo $super_massiv[$i] . "<br/>";
 			
@@ -148,6 +155,16 @@ class RegistrationController extends Controller
 		/* print_r($super_massiv); */
 		
     }
+	
+	public function actionImages(){
+		
+		$model = Advantages::findOne(1);
+		
+		$model->attachImage('../../image.png');
+		
+		
+		
+	}
     
 
 }
