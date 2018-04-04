@@ -16,7 +16,7 @@ class AppAsset extends AssetBundle
 
     ];
     public $js = [
-	   
+	   'js/bootstrap.js',
     ];
 	public $jsOptions = [
 	    

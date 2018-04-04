@@ -20,7 +20,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use backend\models\get;
 use backend\traits\EventTrait;
-
+use vendor\landing\partner\find\Finder;
 
 class PanelController extends Controller
 {
@@ -55,13 +55,16 @@ class PanelController extends Controller
 	
 	public function actionIndex(){
 		
-
-		
-        return $this->render('index',['items'=>$items]); 
+        
+		$logo = Yii::createObject(Finder::className());
+		$logo = $logo->findLogo();
+		return $this->render('index',['logo'=>$logo]); 
 		
 	}
 	
-	}
+	
+	
+}
 
 
 

@@ -1,0 +1,39 @@
+@media (max-width: 1199px){
+    #menu > li {
+        padding: 15px 10px;
+    }
+}
+@media (min-width: 991px) {
+    .sticky-top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 0;
+        background: rgba(24, 23, 29, 0.8);
+        z-index: 998;
+    }
+}
+@media (max-width: 767px) {
+    .navbar-toggle {
+        margin-top: -45px;
+    }
+    #menu > li {
+        display: block;
+    }
+    .navbar-collapse {
+        box-shadow: none;
+    }
+    #price-list .box {
+        margin-bottom: 30px;
+    }
+    .step-slider .owl-item {
+        background-size: 100px !important;
+    }
+    .review-slider .owl-stage {
+        margin-top: 30px;
+    }
+    .review-slider .owl-nav {
+        top: -30px;
+    }
+}

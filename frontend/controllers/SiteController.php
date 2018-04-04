@@ -7,6 +7,8 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use vendor\landing\partner\find\Finder;
+use frontend\models\Model;
 
 use frontend\models\LoginForm;
 
@@ -25,7 +27,7 @@ class SiteController extends Controller
                 'class' => AccessControl::className(),
                 'only' => ['logout', 'login'],
                 'rules' => [
-                    [
+                    /* [
                         'actions' => ['logout'],
                         'allow' => true,
                         'roles' => ['@'],
@@ -35,7 +37,7 @@ class SiteController extends Controller
                         'actions' => ['login'],
                         'allow' => true,
                         'roles' => ['?'],
-                    ],
+                    ], */
                 ],
             ],
             'verbs' => [
@@ -68,10 +70,14 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public function actionIndex()
-    {
-        return $this->render('index');
-    }
+	public function actionIndex(){
+		
+        $model = Yii::createObject(Model::className());
+		
+		 
+		return $this->render('index', $model->all()); 
+		
+	}
 	
 	public function actionLogin(){
 		
@@ -93,5 +99,6 @@ class SiteController extends Controller
 
         return $this->goHome();
     }
+	
 
 }
