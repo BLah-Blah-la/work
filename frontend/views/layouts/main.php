@@ -10,6 +10,7 @@ use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
 
+
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -25,13 +26,11 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 	<link rel="icon" type="image/png" href="images/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+	
 	<?php $this->head() ?>
 </head>
 <body>
 <?php $this->beginBody() ?>
-
-
-
 
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],

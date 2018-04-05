@@ -1,12 +1,13 @@
 <?php
 use yii\helpers\Html;
 use yii\helpers\Url;
+use frontend\models\Model;
 ?>
 <header>
     <div class="sticky">
         <div class="container">
             <div class="row">
-                <? foreach($logo as $var):?>
+                <? foreach($menager[logo] as $var):?>
                 <div class="col-sm-3">
                     <a class="logo" href="/">
                         <?= Html::img(Url::toRoute('/admin/partner/' . $var->logo_image, [

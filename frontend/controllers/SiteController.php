@@ -7,10 +7,10 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use vendor\landing\partner\find\Finder;
 use frontend\models\Model;
-use frontend\models\LoginForm;
-use frontend\models\Review;
+use yii\helpers\Html;
+use frontend\models\Customers;
+use frontend\models\Customers1;
 /**
  * Site controller
  */
@@ -72,12 +72,18 @@ class SiteController extends Controller
     public function actionIndex(){
 		
         $model = Yii::createObject(Model::className());
+		$cus = new Customers();
 		
-		 
-		return $this->render('index', $model->all()); 
+		$cus1 = new Customers1();
+
+		$menager = $model->all();
+		if (Html::encode($cus->load(Yii::$app->request->post())) && $cus->save() || Html::encode($cus1->load(Yii::$app->request->post())) && $cus1->save() ) {
+			
+            return $this->redirect('/');  
+        }
+		return $this->render('index', ['cus' => $cus, 'cus1' => $cus1, 'menager' => $menager]); 
 		
 	}
-	
 	public function actionLogin(){
 		
         if (!\Yii::$app->user->isGuest) {
