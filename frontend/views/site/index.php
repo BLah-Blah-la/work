@@ -111,64 +111,26 @@ use frontend\models\Customers;
         </section>
 
         <section class="left-line" id="price-list">
-            <div class="container">
+            
+			<div class="container">
                 <h2><b>Тарифы</b> на создание landing page</h2>
                 <div class="row">
+				    <? foreach($menager[PriceList] as $var):?>
                     <div class="col-sm-6 col-md-4">
                         <div class="box">
                             <div class="box-header">
-                                <p><b>Экономный</b></p>
-                                <p class="price"><b>12 000</b> руб.</p>
-                                <p class="small">Сроки: 10 рабочих дней</p>
+                                <p><b><?=$var->name?></b></p>
+                                <p class="price"><b><?=$var->value?></b> руб.</p>
+                                <p class="small"><?=$var->terms?></p>
                                 <ul>
-                                    <li>Прототип сайта</li>
-                                    <li>Копирайтинг - продающий текст</li>
-                                    <li>Уникальный дизайн</li>
-                                    <li>Кроссбраузерная верстка</li>
-                                    <li>Настройка сайта</li>
-                                    <li>Установка сайта на хостинг</li>
+                                    <li><?=$var->description?></li>
+                                   <?=$var->id?>
                                 </ul>
-                                <a href="#" class="bttn" data-toggle="modal" data-target="#modal">Заказать тариф "Экономный"</a>
+                                <a href="" class="bttn" data-toggle="modal" data-target="#modal" data-idi = "<?=$var->id?>">Заказать тариф "Экономный"</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="box">
-                            <div class="box-header">
-                                <p><b>Стандартный</b></p>
-                                <p class="price"><b>18 000</b> руб.</p>
-                                <p class="small">Сроки: 12 рабочих дней</p>
-                                <p class="attention">Большая популярность!</p>
-                                <ul>
-                                    <li>Прототип сайта</li>
-                                    <li>Копирайтинг - продающий текст</li>
-                                    <li>Уникальный дизайн + моб. версия</li>
-                                    <li>Кроссбраузерная верстка</li>
-                                    <li>Установка сайта на хостинг</li>
-                                    <li>CMS-система для редактирования</li>
-                                </ul>
-                                <a href="#" class="bttn" data-toggle="modal" data-target="#modal">Заказать тариф "Стандартный"</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="box">
-                            <div class="box-header">
-                                <p><b>Бизнес</b></p>
-                                <p class="price"><b>24 000</b> руб.</p>
-                                <p class="small">Сроки: 15 рабочих дней</p>
-                                <ul>
-                                    <li>Прототип сайта</li>
-                                    <li>Копирайтинг - продающий текст</li>
-                                    <li>Уникальный дизайн</li>
-                                    <li>Адаптивная верстка - 4 расширения</li>
-                                    <li>Установка сайта на хостинг</li>
-                                    <li>CMS-система для редактирования</li>
-                                </ul>
-                                <a href="#" class="bttn" data-toggle="modal" data-target="#modal">Заказать тариф "Бизнес"</a>
-                            </div>
-                        </div>
-                    </div>
+					<? endforeach; ?>
                 </div>
             </div>
         </section>

@@ -21,7 +21,9 @@ class Model extends BaseModel
 		
 		$steps = $model->findSteps();
 		
-		return $this->tables = ['logo' => $logo, 'advantages' => $advantages, 'contacts' => $contacts, 'steps' => $steps];
+		$PriceList = $model->findPriceList();
+		
+		return $this->tables = ['logo' => $logo, 'advantages' => $advantages, 'contacts' => $contacts, 'steps' => $steps, 'PriceList' => $PriceList];
 	
 	}
 }

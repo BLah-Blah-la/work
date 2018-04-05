@@ -5,6 +5,7 @@ return [
     'user.passwordResetTokenExpire' => 3600,
     'basePath' => 'images/Advantages',
 	'price_list' => [
-	'prompt' => 'Укажите тариф'
+	'prompt' => 'Укажите тариф',
+	'options' => ['data-idi' => ['Selected' => true]],
 	],
 ];
