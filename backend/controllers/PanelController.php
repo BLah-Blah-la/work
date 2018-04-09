@@ -58,10 +58,8 @@ class PanelController extends Controller
 	public function actionTest(){
 		
 		$model = new lopez();
-		$categories = Advantages::find()->select(['id', 'description'])->all(); 
-        $data = ArrayHelper::map($categories, 'id', 'description');
-		
-		return $this->render('img', ['model' => $model, 'data' => $data]);   
+		$image = "partner/images/Advantages/Oi0LGxjueJzVb2RTspUUoUdEbTLzMaMH.png";
+		return $model->crop($image, 0, 0, 0, 0); // Вызываем функцию
 		
 	}
 	
