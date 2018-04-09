@@ -30,7 +30,8 @@
         "budyaga/yii2-cropper": "*",
         "navatech/yii2-cropper": "*",
 		"dvizh/yii2-order": "@dev",
-        "dvizh/yii2-review": "@dev"
+        "dvizh/yii2-review": "@dev",
+        "yii2mod/yii2-link-preview": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
