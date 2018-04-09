@@ -4,26 +4,35 @@ use yii\helpers\Url;
 use yii\bootstrap\Modal;
 use yii\widgets\ActiveForm;
 use frontend\models\Customers;
+use yii\widgets\Pjax;
 ?>
 <!-- Модальное окно -->
+
 <?php
-Modal::begin([
-'header' => '',
-'options' => ['id'=>'mal'],
-'class' => '3',])?>
+\yii\bootstrap\Modal::begin([
+
+        ]);?>
 <?php Modal::end();?>
 
-<div class="modal fade" id="modal" role="dialog" tabindex="-1">
+
+<div class="modal fade" id="modal" role="dialog" tabindex="-1" href = "#">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             <h4 class="modal-title" id="myModalLabel">Оставить заявку</h4>
             </div>
+			
             <div class="modal-body">
-                <?php $form = ActiveForm::begin(['options'=>['class' => 'text-center']]); ?>
+                <?php $form = ActiveForm::begin(['options'=>['class' => 'text-center', 'data-pjax' => true, 'enctype' => 'multipart/form-data']]); ?>
                     <div class="form-group">
-                         <?= $form->field($cus, 'price_name')->dropDownList(Customers::priceList(), Yii::$app->params['price_list'])->label(false) ?>
+                    
+					
+					<?= $form->field($cus, 'price_name')->dropDownList(Customers::priceList(), 
+					[
+					'prompt' => 'Укажите тариф',
+	                //'options' => ['1' => ['Selected' => true]]
+                    ])->label(false) ?>
                     </div>
 					
                     <div class="form-group">

@@ -40,6 +40,14 @@ use frontend\models\Model;
             <p><span class="upper">Лучшее у нас</span> <span class="small">дизайн, <br> который приносит деньги</span></p>
             <h1><b class="upper">Landing page</b> <br><span class="price">от 12 000 рублей</span></h1>
             <a href="#" class="bttn" data-toggle="modal" data-target="#modal">Заказать сайт <i class="fa fa-caret-right"></i></a>
+			
         </div>
     </div>
+	 <?php if( Yii::$app->session->hasFlash('success') ): ?>
+		<div class="alert alert-success alert-dismissible" role="alert">
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<?php echo Yii::$app->session->getFlash('success'); ?>
+		</div>
+		<?php endif;?>
 </header>
+	  

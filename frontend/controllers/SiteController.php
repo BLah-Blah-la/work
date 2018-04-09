@@ -11,6 +11,7 @@ use frontend\models\Model;
 use yii\helpers\Html;
 use frontend\models\Customers;
 use frontend\models\Customers1;
+use frontend\models\lopez;
 /**
  * Site controller
  */
@@ -77,9 +78,13 @@ class SiteController extends Controller
 		$cus1 = new Customers1();
 
 		$menager = $model->all();
+		
 		if (Html::encode($cus->load(Yii::$app->request->post())) && $cus->save() || Html::encode($cus1->load(Yii::$app->request->post())) && $cus1->save() ) {
 			
-            return $this->redirect('/');  
+			\Yii::$app->session->setFlash('success', 'Поздравляю, вы оставили заявку');
+			$this->refresh(); 
+            $this->redirect('/');
+			return;
         }
 		return $this->render('index', ['cus' => $cus, 'cus1' => $cus1, 'menager' => $menager]); 
 		
@@ -107,5 +112,21 @@ class SiteController extends Controller
 
         return $this->goHome();
     }
+	
+		public function actionPsg(){
+			
+		$open = new lopez();
+		
+		$str = "Yarım kilo çay, yarım kilo şeker";
+		
+		$end = "\r\n";
+		
+		$len = 312;
+		
+		return chunk_split ($str, $len, $end);
+
+
+
+	}
 
 }

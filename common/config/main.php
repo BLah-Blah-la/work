@@ -21,11 +21,11 @@ return [
         ],
 	  'gallery' => [
             'class' => 'dvizh\gallery\Module',
-            'imagesStorePath' => dirname(dirname(__DIR__)).'/frontend/web/images/store', //path to origin images
-            'imagesCachePath' => dirname(dirname(__DIR__)).'/frontend/web/images/cache', //path to resized copies
+            'imagesStorePath' => dirname(dirname(__DIR__)).'/backend/web/images/store', //path to origin images
+            'imagesCachePath' => dirname(dirname(__DIR__)).'/backend/web/images/cache', //path to resized copies
             'graphicsLibrary' => 'GD',
             'placeHolderPath' => '@webroot/images/placeHolder.png',
-            'adminRoles' => ['administrator', 'admin', 'superadmin'],
+            'adminRoles' => ['Superadmin', 'Superadmin'],
         ],
 		'review' => [
             'class' => 'dvizh\review\Module',

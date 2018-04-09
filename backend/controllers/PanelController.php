@@ -22,6 +22,8 @@ class PanelController extends Controller
     /**
      * @inheritdoc
      */
+	
+	
     public function behaviors()
     {
         return [
@@ -63,24 +65,5 @@ class PanelController extends Controller
 		
 	}
 	
-	public function actionPsg(){
-		
-		
-		return $this->render('photo');
-		
-	}
-	
-	
-	
-	
 }
-
-
-
-
-
-
-
-
-
 ?>

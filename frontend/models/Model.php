@@ -23,7 +23,14 @@ class Model extends BaseModel
 		
 		$PriceList = $model->findPriceList();
 		
-		return $this->tables = ['logo' => $logo, 'advantages' => $advantages, 'contacts' => $contacts, 'steps' => $steps, 'PriceList' => $PriceList];
+		$Portfolio = $model->findPortfolio();
+		
+		$reviews = $model->findReviews();
+		
+		return $this->tables = ['logo' => $logo, 'advantages' => $advantages, 
+		                        'contacts' => $contacts, 'steps' => $steps, 
+								'PriceList' => $PriceList, 'Portfolio' => $Portfolio,
+								'reviews' => $reviews];
 	
 	}
 }
