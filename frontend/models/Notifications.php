@@ -40,7 +40,7 @@ class Notifications extends ActiveRecord
 		return $id;
 	}
 	
-	public function newCustomer($id){
+	public function issetNotification(){
 		
 		$this->addCustomer($id);
 		return true;

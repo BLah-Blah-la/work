@@ -7,6 +7,7 @@ use yii\widgets\Menu;
 use yii\helpers\Html;
 use  backend\assets\AppAsset;
 use nirvana\showloading\ShowLoadingAsset;
+use lo\modules\noty\Wrapper;
 
 /* ShowLoadingAsset::register($this); */
 
@@ -23,6 +24,21 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+	
+	 <?php
+	 $params = [
+	 'layerParams' => [
+        'layerClass' => '',
+        'layerOptions' => [
+            
+        ],
+    ],
+	];
+    if(isset($this->params['layerParams'])){
+        $layerParams = \yii\helpers\ArrayHelper::merge($layerParams, $this->params['layerParams']);
+    }
+    echo  Wrapper::widget($layerParams);
+	?>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
