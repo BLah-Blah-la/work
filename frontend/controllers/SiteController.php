@@ -12,6 +12,8 @@ use yii\helpers\Html;
 use frontend\models\Customers;
 use frontend\models\Customers1;
 use frontend\models\lopez;
+use frontend\models\Notifications;
+
 /**
  * Site controller
  */
@@ -78,11 +80,13 @@ class SiteController extends Controller
 		$cus1 = new Customers1();
 
 		$menager = $model->all();
+		$notifications = new Notifications();
 /* 	    $m = Yii::$app->request->post();
 		foreach($m as $var => $key){ echo $key . $var;} */
 		
 		if (Html::encode($cus->load(Yii::$app->request->post())) && $cus->save() || Html::encode($cus1->load(Yii::$app->request->post())) && $cus1->save() ) {
 			
+			$notifications->save();
 			\Yii::$app->session->setFlash('success', 'Поздравляю, вы оставили заявку');
 			$this->refresh(); 
             $this->redirect('/');
@@ -117,18 +121,13 @@ class SiteController extends Controller
 	
 		public function actionPsg(){
 			
-		$open = new lopez();
+		$customers = Yii::createObject(Customers::className());
+        $get = $customers->find()
+		->select('max(id)')
+		->scalar();
 		
-		$str = "Yarım kilo çay, yarım kilo şeker";
-		
-		$end = "\r\n";
-		
-		$len = 312;
-		
-		return chunk_split ($str, $len, $end);
-
-
-
+		$id = Customers::findOne($get);
+		return $id->id;
 	}
 
 }

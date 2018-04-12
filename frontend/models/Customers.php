@@ -6,6 +6,7 @@ use Yii;
 use yii\helpers\ArrayHelper;
 use vendor\landing\partner\models\PriceList;
 use yii\behaviors\TimestampBehavior;
+use frontend\models\Notifications; 
 /**
  * This is the model class for table "customers".
  *

@@ -1,8 +1,10 @@
 <?php
 
-namespace ...\Notifications; 
+namespace frontend\models;
 use Yii;
 use yii\db\ActiveRecord;
+use frontend\models\Customers;
+use frontend\models\Notifications;
 
 class Notifications extends ActiveRecord
 {
@@ -10,7 +12,7 @@ class Notifications extends ActiveRecord
 	
 	public static function tableName()
     {
-        return 'notifications';
+        return 'notification_customers';
     }
     
 	public static function getDb()
@@ -34,27 +36,29 @@ class Notifications extends ActiveRecord
 		->select('max(id)')
 		->scalar();
 		
-		$id = Clients::findOne($get);
+		$id = Customers::findOne($get);
 		return $id;
 	}
 	
-	public function addCustomers($id)
-	{		
-		$this->tableName();
-		
-	}
 	public function newCustomer($id){
 		
 		$this->addCustomer($id);
 		return true;
 	}
-	public function addPhone($number = NULL){
+	
+	public function beforeSave($insert){
 		
-		$addPhone = Yii::createObject(ClinetPhone::className());
-	    $hone = self::maximum();
-		$addPhone->phone_digital = $number;
-		$addPhone->link('client', $hone);
-
+		if(parent::beforeSave($insert)){
+			
+		    $get = $this->maximum();
+			
+		    $this->id_item = $get->id;
+			
+			return true;
+		} else {
+			
+			return false;
+		}
 	}
 	}
 ?>
