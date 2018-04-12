@@ -78,6 +78,8 @@ class SiteController extends Controller
 		$cus1 = new Customers1();
 
 		$menager = $model->all();
+/* 	    $m = Yii::$app->request->post();
+		foreach($m as $var => $key){ echo $key . $var;} */
 		
 		if (Html::encode($cus->load(Yii::$app->request->post())) && $cus->save() || Html::encode($cus1->load(Yii::$app->request->post())) && $cus1->save() ) {
 			

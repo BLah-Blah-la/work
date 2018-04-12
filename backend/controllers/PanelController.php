@@ -56,12 +56,20 @@ class PanelController extends Controller
 	}
 	
 	public function actionTest(){
-		
-		$model = new lopez();
-		$image = "partner/images/Advantages/Oi0LGxjueJzVb2RTspUUoUdEbTLzMaMH.png";
-		return $model->crop($image, 0, 0, 0, 0); // Вызываем функцию
+		Yii::$app->session->setFlash('success', 'CUSTOM TITLE | noty success');
+		return $this->render('notication');
 		
 	}
+	
+	public function actionAjax(){
+		
+/* 		Yii::$app->session->setFlash('error',   'noty error');
+		Yii::$app->session->setFlash('info',    'noty info');
+		Yii::$app->session->setFlash('success', 'noty success');
+		Yii::$app->session->setFlash('warning', 'noty warning'); */
+		return $this->render('notication');
+	
+ }
 	
 }
 ?>

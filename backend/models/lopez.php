@@ -2,34 +2,51 @@
 namespace backend\models;
 
 use yii\base\Model;
-
+use Yii;
 class lopez extends Model{
 	
-    /*
-    $x_o и $y_o - координаты левого верхнего угла выходного изображения на исходном
-    $w_o и h_o - ширина и высота выходного изображения
-    */
-	function crop($image, $x_o, $y_o, $w_o, $h_o){
-		if (($x_o < 0) || ($y_o < 0) || ($w_o < 0) || ($h_o < 0)) {
-			echo "Некорректные входные параметры";
-			return false;
-			}
-			list($w_i, $h_i, $type) = getimagesize($image); // Получаем размеры и тип изображения (число)
-			$types = array("", "gif", "jpeg", "png"); // Массив с типами изображений
-			$ext = $types[$type]; // Зная "числовой" тип изображения, узнаём название типа
-			if ($ext) {
-				$func = 'imagecreatefrom'.$ext; // Получаем название функции, соответствующую типу, для создания изображения
-				$img_i = $func($image); // Создаём дескриптор для работы с исходным изображением
-				} else {
-					echo 'Некорректное изображение'; // Выводим ошибку, если формат изображения недопустимый
-					return false;
-					}
-					if ($x_o + $w_o > $w_i) $w_o = $w_i - $x_o; // Если ширина выходного изображения больше исходного (с учётом x_o), то уменьшаем её
-					if ($y_o + $h_o > $h_i) $h_o = $h_i - $y_o; // Если высота выходного изображения больше исходного (с учётом y_o), то уменьшаем её
-					$img_o = imagecreatetruecolor($w_o, $h_o); // Создаём дескриптор для выходного изображения
-					imagecopy($img_o, $img_i, 0, 0, $x_o, $y_o, $w_o, $h_o); // Переносим часть изображения из исходного в выходное
-					$func = 'image'.$ext; // Получаем функция для сохранения результата
-					return $func($img_o, $image); // Сохраняем изображение в тот же файл, что и исходное, возвращая результат этой операции
-					}
-					}
+   public function square_preview($file, $size, $path, $_path){
+	   // Открываем оригинальное изображение
+	   header("Content-Type: image/jpg");
+	   $random_string = mt_rand(55, 99999999999999);
+	   $types = array("", "gif", "jpeg", "png"); // Массив с типами изображений
+	   //$source = imagecreatefromjpeg($file);
+	   list($w_i, $h_i, $type) = getimagesize($file);
+	   $ext = $types[$type]; // Зная "числовой" тип изображения, узнаём название типа
+	   if ($ext) {
+		$func = 'imagecreatefrom'.$ext; // Получаем название функции, соответствующую типу, для создания изображения
+        // Создаём дескриптор для работы с исходным изображением
+	    $source = $func($file);
+	   } else {
+		   echo 'Некорректное изображение'; // Выводим ошибку, если формат изображения недопустимый
+		   return false;
+    }
+	   // Получаем размеры оригинального изображения
+	   
+	   list($width, $height) = getimagesize($file);
+	   // Превью
+	   $thumbs = imagecreatetruecolor($size, $size);
+	   // Горизонтальное изображение
+	   if ($width > $height && $width > $size){
+		   imagecopyresampled($thumbs, $source, 0, 0, (($width-$height)/2), 0, $size, $size, $height, $height);
+		   }
+		   // Вертикальное изображение
+		   elseif ($height > $width && $height > $size){
+			   imagecopyresampled($thumbs, $source, 0, 0, 0, (($height-$width)/2), $size, $size, $width, $width);
+			   }
+			   // Если квадрат
+			   elseif ($height == $width && $height > $size){
+				   imagecopyresampled($thumbs, $source, 0, 0, 0, 0, $size, $size, $width, $width);
+				   } else {
+					   $thumbs = $source;
+					   }
+					   // Выводим изображение
+					  
+					 $progm = $path . $random_string . "." . $ext;
+					 $save_to_db = $_path . $random_string . "." . $ext;
+					 imagejpeg($thumbs, $progm);
+					 
+					 return $save_to_db;
+					 }
+}
 ?>

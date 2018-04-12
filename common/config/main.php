@@ -19,17 +19,10 @@ return [
 	  'partner' => [
             'class' => 'vendor\landing\partner\Module',
         ],
-	  'gallery' => [
-            'class' => 'dvizh\gallery\Module',
-            'imagesStorePath' => dirname(dirname(__DIR__)).'/backend/web/images/store', //path to origin images
-            'imagesCachePath' => dirname(dirname(__DIR__)).'/backend/web/images/cache', //path to resized copies
-            'graphicsLibrary' => 'GD',
-            'placeHolderPath' => '@webroot/images/placeHolder.png',
-            'adminRoles' => ['Superadmin', 'Superadmin'],
-        ],
-		'review' => [
-            'class' => 'dvizh\review\Module',
-        ],
+       'noty' => [
+            'class' => 'lo\modules\noty\Module',
+    ],
+	
     ],
 	'controllerMap' => [
         'images' => [

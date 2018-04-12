@@ -31,7 +31,10 @@
         "navatech/yii2-cropper": "*",
 		"dvizh/yii2-order": "@dev",
         "dvizh/yii2-review": "@dev",
-        "yii2mod/yii2-link-preview": "*"
+        "yii2mod/yii2-link-preview": "*",
+		"loveorigami/yii2-notification-wrapper": "*",
+		"bower-asset/noty": "^2.3",
+		"bower-asset/jquery-growl": "^1.3"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

@@ -85,19 +85,10 @@ class Customers extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getPrice()
+    public function getNotifications()
     {
-        return $this->hasOne(PriceList::className(), ['id' => 'price_name']);
+        return $this->hasOne(Notifications::className(), ['id_item' => 'id']);
     }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getPortfolios()
-    {
-        return $this->hasOne(Portfolio::className(), ['id_customer' => 'id']);
-    }
-
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -113,12 +104,6 @@ class Customers extends \yii\db\ActiveRecord
 		return $data;
 		
 	}
-	
-    public function getReviews()
-    {
-        return $this->hasOne(Reviews::className(), ['id_customer' => 'id']);
-		
-    }
 	
 	/* public function beforeSave($insert){
 		if(parent::beforeSave($insert)){
