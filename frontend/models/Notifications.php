@@ -4,12 +4,18 @@ namespace frontend\models;
 use Yii;
 use yii\db\ActiveRecord;
 use frontend\models\Customers;
+use frontend\models\Callback;
 use frontend\models\Notifications;
+use yii\behaviors\TimestampBehavior;
 
 class Notifications extends ActiveRecord
 {
 	const NEW_USER = 'new user';
-	
+	public function behaviors(){
+		return [
+		TimestampBehavior::className(),
+		];
+		}
 	public static function tableName()
     {
         return 'notification_customers';
@@ -40,6 +46,17 @@ class Notifications extends ActiveRecord
 		return $id;
 	}
 	
+	public function maximumCallback(){
+		
+		$customers = Yii::createObject(Callback::className());
+        $get = $customers->find()
+		->select('max(id)')
+		->scalar();
+		
+		$id = Callback::findOne($get);
+		return $id;
+	}
+	
 	public function issetNotification(){
 		
 		$this->addCustomer($id);
@@ -60,5 +77,9 @@ class Notifications extends ActiveRecord
 			return false;
 		}
 	}
+	
+	
+	
+	
 	}
 ?>

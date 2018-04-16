@@ -56,8 +56,13 @@ class PanelController extends Controller
 	}
 	
 	public function actionTest(){
-		Yii::$app->session->setFlash('success', 'CUSTOM TITLE | noty success');
-		return $this->render('notication');
+		
+		return $this->render('edit');
+		
+	}
+	public function actionTet(){
+		
+		return $this->render('mo');
 		
 	}
 	

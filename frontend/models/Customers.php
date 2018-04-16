@@ -52,8 +52,10 @@ class Customers extends \yii\db\ActiveRecord
         return [
 
             [['price_name', 'created_at', 'updated_at'], 'integer'],
-            [['name', 'surname', 'email'], 'string', 'max' => 255],
+            [['name', 'surname'], 'string', 'max' => 255],
             [['phone_digital'], 'string'],
+			[['phone_digital'], 'required', 'message' => 'Поле должно быть заполнено'],
+			[['phone_digital'], 'unique', 'targetAttribute' => ['phone_digital'], 'message' => 'Вы уже оставили заявку'],
             [['price_name'], 'exist', 'skipOnError' => true, 'targetClass' => PriceList::className(), 'targetAttribute' => ['price_name' => 'id']],
 
         ];

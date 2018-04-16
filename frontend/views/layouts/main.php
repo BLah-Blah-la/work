@@ -9,7 +9,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
-
+use lo\modules\noty\Wrapper;
 
 AppAsset::register($this);
 ?>
@@ -28,13 +28,37 @@ AppAsset::register($this);
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 	
 	<?php $this->head() ?>
+    <?php
+    echo Wrapper::widget([
+    'layerClass' => 'lo\modules\noty\layers\Noty',
+    'layerOptions'=>[
+        // for every layer (by default)
+        'layerId' => 'noty-layer',
+        'customTitleDelimiter' => '|',
+        'overrideSystemConfirm' => true,
+        'showTitle' => true,
+
+        // for custom layer
+        'registerAnimateCss' => true,
+        'registerButtonsCss' => true
+    ],
+
+    // clientOptions
+    'options' => [
+        'dismissQueue' => true,
+        'layout' => 'topRight',
+        'timeout' => 3000,
+        'theme' => 'relax',
+
+        // and more for this library...
+    ],
+]);		
+?>	
 </head>
 <body>
 <?php $this->beginBody() ?>
 
-        <?/* = Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ])  */?>
+
         <?/* = Alert::widget()  */?>
 		
         <?= $content ?>

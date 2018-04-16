@@ -10,6 +10,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use common\widgets\Alert;
 use yii\widgets\ActiveForm;
+use lo\modules\noty\Wrapper;
 
 AppAsset::register($this);
 ?>
@@ -23,6 +24,32 @@ AppAsset::register($this);
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+	<?php
+echo Wrapper::widget([
+    'layerClass' => 'lo\modules\noty\layers\Noty',
+    'layerOptions'=>[
+        // for every layer (by default)
+        'layerId' => 'noty-layer',
+        'customTitleDelimiter' => '|',
+        'overrideSystemConfirm' => true,
+        'showTitle' => true,
+
+        // for custom layer
+        'registerAnimateCss' => true,
+        'registerButtonsCss' => true
+    ],
+
+    // clientOptions
+    'options' => [
+        'dismissQueue' => true,
+        'layout' => 'topRight',
+        'timeout' => 3000,
+        'theme' => 'relax',
+
+        // and more for this library...
+    ],
+]);		
+?>
 </head>
 <body>
 <?php $this->beginBody() ?>

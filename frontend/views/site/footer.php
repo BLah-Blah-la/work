@@ -28,7 +28,7 @@ use yii\widgets\Pjax;
                     <div class="form-group">
                     
 					
-					<?= $form->field($cus, 'price_name')->dropDownList(Customers::priceList(), 
+					<?= $form->field($customers, 'price_name')->dropDownList(Customers::priceList(), 
 					[
 					'prompt' => 'Укажите тариф',
 	                //'options' => ['1' => ['Selected' => true]]
@@ -36,10 +36,10 @@ use yii\widgets\Pjax;
                     </div>
 					
                     <div class="form-group">
-                    <?= $form->field($cus, 'name')->textInput(['maxlength' => true])->label(false)  ?>
+                    <?= $form->field($customers, 'name')->textInput(['maxlength' => true])->label(false)  ?>
                     </div>
                     <div class="form-group">
-                    <?= $form->field($cus, 'phone_digital')->widget(\yii\widgets\MaskedInput::className(), [
+                    <?= $form->field($customers, 'phone_digital')->widget(\yii\widgets\MaskedInput::className(), [
 			'mask' => '+7(999) 999 99 99',
 			'clientOptions' => [
 			   'removeMaskOnSubmit' => true,

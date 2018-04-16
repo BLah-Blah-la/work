@@ -10,9 +10,10 @@ use yii\filters\AccessControl;
 use frontend\models\Model;
 use yii\helpers\Html;
 use frontend\models\Customers;
-use frontend\models\Customers1;
+use frontend\models\Callback;
 use frontend\models\lopez;
 use frontend\models\Notifications;
+use common\models\AccountNotification;
 
 /**
  * Site controller
@@ -21,7 +22,8 @@ class SiteController extends Controller
 {
 	/**
      * @inheritdoc
-     */     
+     */
+	
 	public function behaviors()
     {
         return [
@@ -75,24 +77,43 @@ class SiteController extends Controller
     public function actionIndex(){
 		
         $model = Yii::createObject(Model::className());
-		$cus = new Customers();
 		
-		$cus1 = new Customers1();
+		$customers = new Customers();
+		
+		$notifications = new Notifications();
+		
+		$callback = new Callback();
 
 		$menager = $model->all();
-		$notifications = new Notifications();
-/* 	    $m = Yii::$app->request->post();
-		foreach($m as $var => $key){ echo $key . $var;} */
 		
-		if (Html::encode($cus->load(Yii::$app->request->post())) && $cus->save() || Html::encode($cus1->load(Yii::$app->request->post())) && $cus1->save() ) {
+		if (Html::encode($customers->load(Yii::$app->request->post())) && $customers->save()) {
 			
-			$notifications->save();
-			\Yii::$app->session->setFlash('success', 'Поздравляю, вы оставили заявку');
-			$this->refresh(); 
+		    $user = $notifications->maximum();
+		    	
+			AccountNotification::create(AccountNotification::KEY_NEW_ACCOUNT, ['user' => $user])->send();
+			
+			Yii::$app->session->setFlash('success', 'Поздравляю, вы оставили заявку');
+			
             $this->redirect('/');
+			
 			return;
         }
-		return $this->render('index', ['cus' => $cus, 'cus1' => $cus1, 'menager' => $menager]); 
+		
+		if(Html::encode($callback->load(Yii::$app->request->post())) && $callback->save())
+		{
+			$user = $notifications->maximumCallback();
+		    	
+			AccountNotification::create(AccountNotification::KEY_NEW_ACCOUNT, ['user' => $user])->send2();
+			
+			Yii::$app->session->setFlash('success', 'Поздравляю, вы оставили заявку');
+			
+            $this->redirect('/');
+			
+			return;
+
+		}
+		
+		return $this->render('index', ['customers' => $customers, 'callback' => $callback, 'menager' => $menager]); 
 		
 	}
 	public function actionLogin(){
@@ -121,13 +142,14 @@ class SiteController extends Controller
 	
 		public function actionPsg(){
 			
-		$customers = Yii::createObject(Customers::className());
-        $get = $customers->find()
-		->select('max(id)')
-		->scalar();
-		
-		$id = Customers::findOne($get);
-		return $id->id;
+		 $time = date('H:i:s');
+         return $this->render('psg', ['time' => $time]);
+
 	}
+	public function actionEdi()
+    {
+ 
+     return $this->render('mo');
+    }
 
 }

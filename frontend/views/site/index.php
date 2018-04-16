@@ -6,8 +6,9 @@ use yii\widgets\ActiveForm;
 use yii\widgets\Pjax;
 use frontend\models\Customers;
 ?>
-        <?php include 'top-panel.php'; ?>
-        
+        <?php include 'head.php'; ?>
+		<?php include 'top-panel.php'; ?>
+
         <section class="left-line" id="advantages">
             <div class="container">
                 <h2><b>Преимущества</b> работы с нами</h2>
@@ -96,12 +97,12 @@ use frontend\models\Customers;
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="form-group">
-                                 <?= $form->field($cus1, 'name')->textInput(['maxlength' => true, 'placeholder' => 'Ваше имя', 'class' => 'form-control'])->label(false)?>
+                                 <?= $form->field($callback, 'name')->textInput(['maxlength' => true, 'placeholder' => 'Ваше имя', 'class' => 'form-control'])->label(false)?>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
-								<?= $form->field($cus1, 'phone_digital')->widget(\yii\widgets\MaskedInput::className(), [
+								<?= $form->field($callback, 'phone_digital')->widget(\yii\widgets\MaskedInput::className(), [
 		                            'mask' => '+7(999) 999 99 99',
 			                        'clientOptions' => [
 			                        'removeMaskOnSubmit' => true,
@@ -112,7 +113,7 @@ use frontend\models\Customers;
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
-							<?= $form->field($cus1, 'email')->textInput(['maxlength' => true, 'placeholder' => 'Введите Ваш e-mail', 'class' => 'form-control'])->label(false)?>
+							<?= $form->field($callback, 'email')->textInput(['maxlength' => true, 'placeholder' => 'Введите Ваш e-mail', 'class' => 'form-control'])->label(false)?>
                             </div>
                         </div>
                     </div>

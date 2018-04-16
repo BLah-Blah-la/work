@@ -8,4 +8,7 @@ return [
 	'prompt' => 'Укажите тариф',
 	'options' => ['data-idi' => ['Selected' => true]],
 	],
+	'status' => [
+	'prompt' => 'Укажите статус',
+	],
 ];

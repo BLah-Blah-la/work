@@ -12,6 +12,11 @@
         "irc": "irc://irc.freenode.net/yii",
         "source": "https://github.com/yiisoft/yii2"
     },
+	
+	"extra": {
+        "bootstrap": "vendor\\landing\\partner\\Bootstrap"
+    },
+	
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
@@ -34,7 +39,9 @@
         "yii2mod/yii2-link-preview": "*",
 		"loveorigami/yii2-notification-wrapper": "*",
 		"bower-asset/noty": "^2.3",
-		"bower-asset/jquery-growl": "^1.3"
+		"bower-asset/jquery-growl": "^1.3",
+		"webzop/yii2-notifications": "*",
+		"2amigos/yii2-chartjs-widget": "~2.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

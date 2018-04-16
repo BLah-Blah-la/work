@@ -25,20 +25,6 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 	
-	 <?php
-	 $params = [
-	 'layerParams' => [
-        'layerClass' => '',
-        'layerOptions' => [
-            
-        ],
-    ],
-	];
-    if(isset($this->params['layerParams'])){
-        $layerParams = \yii\helpers\ArrayHelper::merge($layerParams, $this->params['layerParams']);
-    }
-    echo  Wrapper::widget($layerParams);
-	?>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -52,6 +38,32 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
 </head>
 <body class="nav-<?= !empty($_COOKIE['menuIsCollapsed']) && $_COOKIE['menuIsCollapsed'] == 'true' ? 'sm' : 'md' ?>" >
 <?php $this->beginBody(); ?>
+<?php
+echo Wrapper::widget([
+    'layerClass' => 'lo\modules\noty\layers\Noty',
+    'layerOptions'=>[
+        // for every layer (by default)
+        'layerId' => 'noty-layer',
+        'customTitleDelimiter' => '|',
+        'overrideSystemConfirm' => true,
+        'showTitle' => true,
+
+        // for custom layer
+        'registerAnimateCss' => true,
+        'registerButtonsCss' => true
+    ],
+
+    // clientOptions
+    'options' => [
+        'dismissQueue' => true,
+        'layout' => 'topRight',
+        'timeout' => 3000,
+        'theme' => 'relax',
+
+        // and more for this library...
+    ],
+]);		
+?>
 <div class="container body">
 
     <div class="main_container">
@@ -67,10 +79,10 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                 <!-- menu prile quick info -->
                 <div class="profile">
                     <div class="profile_pic">
-                        <img src="http://placehold.it/128x128" alt="..." class="img-circle profile_img">
+                        <img src="//gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?s=230" alt="..." class="img-circle profile_img">
                     </div>
                     <div class="profile_info">
-                        <span>Добро пожаловать,</span>
+                        <span><?= Yii::t('modules/notifications', 'Welcome') ?></span>
                         <h2><?=Yii::$app->user->identity->username?></h2>
                     </div>
                 </div>
@@ -82,16 +94,16 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
 
                     <div class="menu_section">
-                        <h3>General</h3>
+                        <h3><?= Yii::t('modules/notifications', 'General') ?></h3>
                         <?=
                         \yiister\gentelella\widgets\Menu::widget(
                             [
                                 "items" => [
-                                    ["label" => "Домашняя страница", "url" => "/admin", "icon" => "home", 'id' => ''],
+                                    ["label" => Yii::t('modules/notifications', 'Home page'), "url" => "/admin", "icon" => "home", 'id' => ''],
                                    /*  ["label" => "Layout", "url" => ["site/layout"], "icon" => "files-o"],
                                     ["label" => "Error page", "url" => ["site/error-page"], "icon" => "close"], */
                                     [
-                                        "label" => "Виджеты",
+                                        "label" => Yii::t('modules/notifications', 'Widgets'),
                                         "icon" => "th",
                                         "url" => "#",
                                         "items" => [
@@ -99,85 +111,59 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                             ["label" => "Menu", "url" => ["panel/Menu"]],
                                         ],
                                     ],
-									
-                                  /*   [
-                                        "label" => "Badges",
-                                        "url" => "#",
-                                        "icon" => "table",
-                                        "items" => [
-                                            [
-                                                "label" => "Default",
-                                                "url" => "#",
-                                                "badge" => "123",
-                                            ],
-                                            [
-                                                "label" => "Success",
-                                                "url" => "#",
-                                                "badge" => "new",
-                                                "badgeOptions" => ["class" => "label-success"],
-                                            ],
-                                            [
-                                                "label" => "Danger",
-                                                "url" => "#",
-                                                "badge" => "!",
-                                                "badgeOptions" => ["class" => "label-danger"],
-                                            ],
-                                        ],
-                                    ], */
                                     [
-                                        "label" => "Категории",
+                                        "label" => Yii::t('modules/notifications', 'Categories'),
                                         "url" => "#",
                                         "icon" => "table",
                                         "items" => [
 											
 											[
-                                                "label" => "Контакты",
+                                                "label" => Yii::t('modules/notifications', 'Contacts'),
                                                 "url" => ['/partner/contacts'],
                                             ],
 											
 											[
-                                               'label' => 'Заказчики', 'url' => ['/partner/customers'],
+                                               'label' => Yii::t('modules/notifications', 'Customers'), 
+											   'url' => ['/partner/customers'],
                                             ],
 											
 											[
-                                               'label' => 'Заголовки', 'url' => ['/partner/titles'],
+                                               'label' => Yii::t('modules/notifications', 'Titles'), 
+											   'url' => ['/partner/titles'],
                                             ],
 											
 											[
-                                                'label' => 'Преимущества', 'url' => ['/partner/advantages'],
+                                                'label' => Yii::t('modules/notifications', 'Advantages'), 
+												'url' => ['/partner/advantages'],
                                             ],
 											
 											[
-                                                'label' => 'Тарифы', 'url' => ['/partner/price-list'],
+                                                'label' => Yii::t('modules/notifications', 'Price-list'), 
+												'url' => ['/partner/price-list'],
                                             ],
 											
 											[
-                                                'label' => 'Отзывы', 'url' => ['/partner/reviews'],
+                                                'label' => Yii::t('modules/notifications', 'Reviews'), 
+												'url' => ['/partner/reviews'],
                                             ],
 											
 										    [
-                                                'label' => 'Портфолио', 'url' => ['/partner/portfolio'],
+                                                'label' => Yii::t('modules/notifications', 'Portfolio'),
+	
+												'url' => ['/partner/portfolio'],
                                             ],
                                             [
-                                                'label' => 'Логотип', 'url' => ['/partner/logo'],
+                                                'label' => Yii::t('modules/notifications', 'Logo'),
+												'url' => ['/partner/logo'],
                                             ],
 											[
-                                                'label' => 'Этапы работы', 'url' => ['/partner/steps'],
+                                                'label' => Yii::t('modules/notifications', 'Steps'),
+												'url' => ['/partner/steps'],
                                             ],
-                                            /* [
-                                                "label" => "Second level 2",
-                                                "url" => "#",
-                                                "items" => [
-                                                    [
-                                                        "label" => "Third level 1",
-                                                        "url" => "#",
-                                                    ],
-                                                    [
-                                                        "label" => "Third level 2",
-                                                        "url" => "#",
-                                                    ],
-                                                ],
-                                            ], */
+											[
+                                                'label' => Yii::t('modules/notifications', 'Callbacks'),
+												'url' => ['/partner/callback'],
+                                            ],
                                         ],
 		
                                     ],
@@ -222,15 +208,15 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                     <ul class="nav navbar-nav navbar-right">
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <img src="http://placehold.it/128x128" alt=""><span><?= Yii::$app->user->identity->username?></span>
+                                <img src="//gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?s=230" alt=""><span><?= Yii::$app->user->identity->username?></span>
                                 <span class=" fa fa-angle-down"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                <li><a href="/admin/user/profile">  Профиль</a>
+                                <li><a href="/admin/user/profile">  <?= Yii::t('modules/notifications', 'Profile')?> </a>
                                 </li>
                                 <li>
                                     <a href="/admin/user/settings">
-                                        <span>Настройки</span>
+                                        <span><?=Yii::t('modules/notifications', 'Settings')?></span>
                                     </a>
                                 </li>
                 
@@ -248,10 +234,10 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                         </li>
 
                         <li role="presentation" class="dropdown">
-                            <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-                                <i class="fa fa-envelope-o"></i>
-                                <span class="badge bg-green">1</span>
-                            </a>
+                          <div class="header">
+                            <?php echo \webzop\notifications\widgets\Notifications::widget() ?>
+                            </div>
+							
                             <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
                                 <li>
                                     <a>

@@ -23,6 +23,21 @@ return [
             'class' => 'lo\modules\noty\Module',
     ],
 	
+	    'notifications' => [
+            'class' => 'webzop\notifications\Module',
+            'channels' => [
+                'screen' => [
+                    'class' => 'webzop\notifications\channels\ScreenChannel',
+                ],
+                'email' => [
+                    'class' => 'webzop\notifications\channels\EmailChannel',
+                    'message' => [
+                        'from' => 'example@email.com'
+                    ],
+                ],
+            ],
+        ],
+	
     ],
 	'controllerMap' => [
         'images' => [
