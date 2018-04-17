@@ -118,23 +118,25 @@ echo Wrapper::widget([
                                         "items" => [
 											
 											[
-                                                "label" => Yii::t('modules/notifications', 'Contacts'),
-                                                "url" => ['/partner/contacts'],
+                                                'label' => Yii::t('modules/notifications', 'Logo'),
+												'url' => ['/partner/logo'],
                                             ],
-											
-											[
-                                               'label' => Yii::t('modules/notifications', 'Customers'), 
-											   'url' => ['/partner/customers'],
-                                            ],
-											
+
 											[
                                                'label' => Yii::t('modules/notifications', 'Titles'), 
 											   'url' => ['/partner/titles'],
                                             ],
 											
+											
 											[
                                                 'label' => Yii::t('modules/notifications', 'Advantages'), 
 												'url' => ['/partner/advantages'],
+                                            ],
+											
+											[
+                                                'label' => Yii::t('modules/notifications', 'Portfolio'),
+	
+												'url' => ['/partner/portfolio'],
                                             ],
 											
 											[
@@ -143,23 +145,25 @@ echo Wrapper::widget([
                                             ],
 											
 											[
+                                                'label' => Yii::t('modules/notifications', 'Steps'),
+												'url' => ['/partner/steps'],
+                                            ],
+											
+											[
                                                 'label' => Yii::t('modules/notifications', 'Reviews'), 
 												'url' => ['/partner/reviews'],
                                             ],
 											
-										    [
-                                                'label' => Yii::t('modules/notifications', 'Portfolio'),
-	
-												'url' => ['/partner/portfolio'],
-                                            ],
-                                            [
-                                                'label' => Yii::t('modules/notifications', 'Logo'),
-												'url' => ['/partner/logo'],
-                                            ],
 											[
-                                                'label' => Yii::t('modules/notifications', 'Steps'),
-												'url' => ['/partner/steps'],
+                                                "label" => Yii::t('modules/notifications', 'Contacts'),
+                                                "url" => ['/partner/contacts'],
                                             ],
+										    
+                                            [
+                                               'label' => Yii::t('modules/notifications', 'Customers'), 
+											   'url' => ['/partner/customers'],
+                                            ],
+											
 											[
                                                 'label' => Yii::t('modules/notifications', 'Callbacks'),
 												'url' => ['/partner/callback'],
