@@ -19,62 +19,44 @@ AppAsset::register($this);
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <?= Html::csrfMetaTags() ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-	<link rel="icon" type="image/png" href="image/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-	
-	<?php $this->head() ?>
-    <?php
-    echo Wrapper::widget([
-    'layerClass' => 'lo\modules\noty\layers\Noty',
-    'layerOptions'=>[
-        // for every layer (by default)
-        'layerId' => 'noty-layer',
-        'customTitleDelimiter' => '|',
-        'overrideSystemConfirm' => true,
-        'showTitle' => true,
-
-        // for custom layer
-        'registerAnimateCss' => true,
-        'registerButtonsCss' => true
-    ],
-
-    // clientOptions
-    'options' => [
-        'dismissQueue' => true,
-        'layout' => 'topRight',
-        'timeout' => 3000,
-        'theme' => 'relax',
-
-        // and more for this library...
-    ],
-]);		
-?>	
+    <?php $this->head() ?>
 </head>
 <body>
 <?php $this->beginBody() ?>
 
+<div class="wrap">
+    <?php
+    NavBar::begin([
+        'brandLabel' => Yii::$app->name,
+        'brandUrl' => Yii::$app->homeUrl,
+        'options' => [
+            'class' => 'navbar-inverse navbar-fixed-top',
+        ],
+    ]);
+    NavBar::end();
+    ?>
 
-        <?/* = Alert::widget()  */?>
-		
+    <div class="container">
+        <?= Breadcrumbs::widget([
+            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+        ]) ?>
+        <?= Alert::widget() ?>
         <?= $content ?>
-		
-<footer class="container-fluid">
-    <ul>
-        <li>© 2018 KOPOLOVEC</li>
-        <li>+380 (95)-47-02-317</li>
-        <li>brukba123@gmail.com</li>
-    </ul>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+
+        <p class="pull-right"><?= Yii::powered() ?></p>
+    </div>
 </footer>
 
 <?php $this->endBody() ?>
 </body>
 </html>
-
-
 <?php $this->endPage() ?>
-

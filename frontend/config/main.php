@@ -18,7 +18,6 @@ return [
 		'as frontend' => 'dektrium\user\filters\FrontendFilter',
        ],
     ],
-	'defaultRoute' => 'site',
 	'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',

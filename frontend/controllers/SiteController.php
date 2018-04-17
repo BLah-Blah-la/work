@@ -24,23 +24,17 @@ class SiteController extends Controller
      * @inheritdoc
      */
 	
-	public function behaviors()
+    public function behaviors()
     {
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'login'],
+                'only' => ['logout'],
                 'rules' => [
                     [
                         'actions' => ['logout'],
                         'allow' => true,
                         'roles' => ['@'],
-                    ],
-                    
-					[
-                        'actions' => ['login'],
-                        'allow' => true,
-                        'roles' => ['?'],
                     ],
                 ],
             ],
@@ -54,7 +48,7 @@ class SiteController extends Controller
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function actions()
     {
@@ -72,84 +66,72 @@ class SiteController extends Controller
     /**
      * Displays homepage.
      *
-     * @return mixed
+     * @return string
      */
-    public function actionIndex(){
-		
-        $model = Yii::createObject(Model::className());
-		
-		$customers = new Customers();
-		
-		$notifications = new Notifications();
-		
-		$callback = new Callback();
+    public function actionIndex()
+    {
+        return $this->render('index');
+    }
 
-		$menager = $model->all();
-		
-		if (Html::encode($customers->load(Yii::$app->request->post())) && $customers->save()) {
-			
-		    $user = $notifications->maximum();
-		    	
-			AccountNotification::create(AccountNotification::KEY_NEW_ACCOUNT, ['user' => $user])->send();
-			
-			Yii::$app->session->setFlash('success', 'Поздравляю, вы оставили заявку');
-			
-            $this->redirect('/');
-			
-			return;
+    /**
+     * Login action.
+     *
+     * @return Response|string
+     */
+    public function actionLogin()
+    {
+        if (!Yii::$app->user->isGuest) {
+            return $this->goHome();
         }
-		
-		if(Html::encode($callback->load(Yii::$app->request->post())) && $callback->save())
-		{
-			$user = $notifications->maximumCallback();
-		    	
-			AccountNotification::create(AccountNotification::KEY_NEW_ACCOUNT, ['user' => $user])->send2();
-			
-			Yii::$app->session->setFlash('success', 'Поздравляю, вы оставили заявку');
-			
-            $this->redirect('/');
-			
-			return;
 
-		}
-		
-		return $this->render('index', ['customers' => $customers, 'callback' => $callback, 'menager' => $menager]); 
-		
-	}
-	public function actionLogin(){
-		
-        if (!\Yii::$app->user->isGuest) {
-            $this->goHome();
-        }
-		
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         }
-        return $this->render('login', ['model' => $model]);
-    }
-    public function actionSome(){
-		$model = new Review();
-		return $this->render('some', ['model'=>$model]);
-	}
-	public function actionLogout()
-    {
 
+        $model->password = '';
+        return $this->render('login', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     * Logout action.
+     *
+     * @return Response
+     */
+    public function actionLogout()
+    {
         Yii::$app->user->logout();
 
         return $this->goHome();
     }
-	
-		public function actionPsg(){
-			
-		 $time = date('H:i:s');
-         return $this->render('psg', ['time' => $time]);
 
-	}
-	public function actionEdi()
+    /**
+     * Displays contact page.
+     *
+     * @return Response|string
+     */
+    public function actionContact()
     {
- 
-     return $this->render('mo');
+        $model = new ContactForm();
+        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
+            Yii::$app->session->setFlash('contactFormSubmitted');
+
+            return $this->refresh();
+        }
+        return $this->render('contact', [
+            'model' => $model,
+        ]);
     }
 
+    /**
+     * Displays about page.
+     *
+     * @return string
+     */
+    public function actionAbout()
+    {
+        return $this->render('about');
+    }
 }
